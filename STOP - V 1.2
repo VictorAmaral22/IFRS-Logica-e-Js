@@ -1,0 +1,582 @@
+alert("_BEM_VINDO_\n_____AO______\n____STOP!_____");
+
+var sairmenu = "N";
+
+var mov = 1;
+
+var menu = "]]]]STOP![[[[\n"+"- JOGAR -\n"+"  como jogar\n"+"  créditos\n"+"  sair";
+
+for( ; (sairmenu == "N" || sairmenu == "n") && (sairmenu != "S" || sairmenu != "s") ; ){
+
+   for( ; mov!= "" ; ){
+
+      mov = prompt(menu);
+
+      //Para cima
+
+      if( mov == "w" || mov == "W" ){
+
+        switch (menu) {
+
+              case "]]]]STOP![[[[\n"+"- JOGAR -\n"+"  como jogar\n"+"  créditos\n"+"  sair":
+
+                  menu = "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"  créditos\n"+"- SAIR -";
+
+                  break;
+
+              case "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"  créditos\n"+"- SAIR -":
+
+                  menu = "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"- CRÉDITOS -\n"+"  sair";
+
+                  break;
+
+              case "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"- CRÉDITOS -\n"+"  sair":
+
+                  menu = "]]]]STOP![[[[\n"+"  jogar\n"+"- COMO JOGAR -\n"+"  créditos\n"+"  sair";
+
+                  break;
+
+              case  "]]]]STOP![[[[\n"+"  jogar\n"+"- COMO JOGAR -\n"+"  créditos\n"+"  sair":
+
+                  menu = "]]]]STOP![[[[\n"+"- JOGAR -\n"+"  como jogar\n"+"  créditos\n"+"  sair";
+
+                  break;
+
+        }
+
+      }
+
+      //Para baixo
+
+      if( mov == "s" || mov == "S" ){
+
+        switch (menu) {
+
+              case "]]]]STOP![[[[\n"+"- JOGAR -\n"+"  como jogar\n"+"  créditos\n"+"  sair":
+
+                  menu = "]]]]STOP![[[[\n"+"  jogar\n"+"- COMO JOGAR -\n"+"  créditos\n"+"  sair";
+
+                  break;
+
+              case "]]]]STOP![[[[\n"+"  jogar\n"+"- COMO JOGAR -\n"+"  créditos\n"+"  sair":
+
+                  menu = "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"- CRÉDITOS -\n"+"  sair";
+
+                  break;
+
+              case "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"- CRÉDITOS -\n"+"  sair":
+
+                  menu =  "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"  créditos\n"+"- SAIR -";
+
+                  break;
+
+              case "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"  créditos\n"+"- SAIR -":
+
+                  menu = "]]]]STOP![[[[\n"+"- JOGAR -\n"+"  como jogar\n"+"  créditos\n"+"  sair";
+
+                  break;
+
+        }
+
+      }
+      //O que o jogador não pode fazer
+      if( mov != "w" && mov != "W" && mov != "s" && mov != "S" && mov!=(isNaN(mov)) ){
+
+        var pergunta = prompt("QUERES UMA AJUDA?");
+
+        if ( (pergunta == "s" || pergunta == "S" || pergunta == "SIM" || pergunta == "sim" || pergunta == "") && ( pergunta != "n" && pergunta != "N" && pergunta != "NÃO" && pergunta != "não" && pergunta != "NAO" && pergunta != "nao" ) ){
+
+          alert("Aqui estão alguns comandos:\nPara se mover pelo menu > PARA CIMA - W\nPara se mover pelo menu > PARA BAIXO - S\nPara escolher alguma opção do menu > APERTE ENTER");
+
+        }
+
+        if( (pergunta == "n" || pergunta == "N" || pergunta == "NÃO" || pergunta == "não" || pergunta == "NAO" || pergunta == "nao") && (pergunta != "s" && pergunta != "S" && pergunta != "SIM" && pergunta != "sim") ){
+
+          alert("OK, ATÉ UM OUTRO DIA");
+
+        }
+
+      }
+
+   }
+   //Caso a pessoa deseja sair do jogo
+
+   if( menu == "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"  créditos\n"+"- SAIR -" ){
+
+     sairmenu = prompt("Tem certeza que deseja sair?\n S( Para sim ) ou N(Para não)");
+
+     mov = 1;
+
+   }
+
+   //Caso o jogador queira aprender a jogar stop
+   if( menu == "]]]]STOP![[[[\n"+"  jogar\n"+"- COMO JOGAR -\n"+"  créditos\n"+"  sair" ){
+
+     var voltar = "N";
+
+     while( voltar != "s" && voltar!= "S" ){
+
+          alert("O STOP É UM JOGO ONDE É SORTEADA UA LETRA DO ALFABETO NO COMEÇO DA PARTIDA, EXISTEM 8 CATEGORIAS QUE SÃO: NOME, CEP, FRUTA, COR, ANIMAL, OBJETO, CARRO(MARCAS DE CARROS) E ESPORTE. O JOGADOR DEVE PREENCHER AS LACUNAS COM PALAVRAS QUE SE ENCAIXEM NAS CATEGORIAS E QUE COMEÇEM COM A LETRA SORTEADA.\n\nPOR EXEMPLO, DIGAMOS QUE A LETRA SORTEADA FOI A LETRA A. TU DEVES ESCOLHER UMA CATEGORIA DIGITANDO O SEU NOME E APÓS ISSO, DIGITARÁS UMA PALAVRA QUE SUA DEFINIÇÃO SE ENCAICHE NA CATEGORIA E QUE COMEÇE COM A LETRA A. \n\nDIGAMOS QUE TU QUEIRAS PREENCHER A CATEGORIA NOME, FICARÁ ASSIM\n\n-|_NOME_|\n  ANA\n\nFAÇA A MESMA COISA COM AS OUTRAS CATEGORIAS!\nUM DETALHE IMORTANTE, NÃO COLOQUE ACENTOS, OBRIGADO!\n\nAO PREENCHER TODAS ELAS, SE NÃO CONSEGUIRES TODAS, PELO MENOS ALGUMAS, DIGITE A PALAVRA 'PREENCHIDO', ASSIM O COMPUTADOR TAMBÉM IRÁ SELECIONAR RESPOSTAS E IRÁ COMPARÁ-LAS COM AS SUAS. SE TU TIVERES COLOCADO UMA PALAVRA DIFERENTE DO PC EM ALGUMA CATEGORIA, GANHAS 10 PONTOS, CASO TENHAS COLOCADO UMA PALAVRA IGUAL A RESPOSTA DO PC, GANHAS 5 PONTOS. \n\nQUEM PONTUAR MAIS VENÇE!");
+
+          voltar = prompt("Deseja voltar ao menu?\n(Responda s(Para sim) e N(Para não)");
+
+     }
+
+     mov = 1;
+
+   }
+
+   //Caso a pessoa deseja ver os créditos
+
+   if( menu == "]]]]STOP![[[[\n"+"  jogar\n"+"  como jogar\n"+"- CRÉDITOS -\n"+"  sair" ){
+
+     var voltar = "N";
+
+     while( voltar != "s" && voltar!= "S" ){
+
+          alert("-Victor Amaral-");
+
+          voltar = prompt("Deseja voltar ao menu?\n(Responda s(Para sim) e N(Para não)");
+
+     }
+
+     mov = 1;
+
+   }
+
+   //Caso a pessoa deseje jogar
+
+   if( menu == "]]]]STOP![[[[\n"+"- JOGAR -\n"+"  como jogar\n"+"  créditos\n"+"  sair" && mov != 1 ){  
+
+     var VOLTARaomenu = "N"; 
+
+     for( ; VOLTARaomenu == "N" && VOLTARaomenu != "S"; ){
+
+        //BANCO DE DADOS
+
+        //Nomes
+var DATABANKnome = [ ["ANA","ABIGAIL","ADA","ADELAINE","ADELE","ADRIANE","ADRIELE","AGATA","AGNES","ALCIONE","ALESSANDRA","ALEXANDRIA","ALEXA","ALICE","AMANDA","ANABELE","ANDREA","ANDRESSA","ANGELICA","ANGELINA","ANITA","ARIEL","ASHLEY","ATENA","AUGUSTA","ABEL","ABRAAO","ABRAO","AECIO","ADELIO","ADAO","ADOLFO","ADOLF","ADRIEN","AFONSO","AGOSTINHO","AIRTON","ALBERTO","ALBERT","ALESSANDRO","ALEX","AEXANDRE","ALFRED","ALFREDO","ALAN","ALVARO","AMADEUS","AMON","ANDRE","ANDREW","ANGELO","ANTHONY","ANTONIO","APOLO","AQUILES","ARMINHO","ARNOLD","ARTHUR","NAO EXISTE"],["BRUNO","BALTAZAR","BARACK","BARAO","BARNABE","BARTOLOMEU","BRASIL","BEN","BENJAMIN","BENTO","BERNARDO","BONIFACIO","BORIS","BRADLEY","BRANDOM","BRUCE","BRYAN","BARBARA","BRASILIA","BEATRICE","BEATRIZ","BELA","BERNADETTE","BETH","BETTY","BIANCA","BIA","BONNIE","BRENDA","BRUNA","NAO EXISTE"],["CARLOS","CAETANO","CAIM","CAIO","CAIQUE","CALVIN","CALVINO","CAMERON","CASSIANO","CAUA","CHARLES","CHRIS","CHRISTIAN","CHRISTOFER","CID","CIRO","CONNOR","CRISTOVAO","CAMILA","CARLA","CARMELITA","CAROL","CAROLINA","CAROLINE","CELINA","CHLOE","CHRISTIANE","CHRISTIANE","CLARA","CINDY","CLAUDIA","CLEOPATRA","CONSTANTINOPLA","CORALINE","CRISTINA","NAO EXISTE"],["DEBORA","DAFNE","DAIANE","DIANA","DAISY","DAISI","DANIELA","DANIELLE","DANIELE","DERCY","DERCI","DARCY","DARCI","DAYANE","DEBORAH","DILMA","DINAH","DILMAE","DOLORES","DORA","DULCE","DANIEL","DANTE","DALTON","DAMIAN","DANILO","DARDO","DARIUS","DAVE","DAVI","DAVID","NAO EXISTE"],["ELIANA","EDNA","EDUARDA","ELENA","ELISABETH","ELIZABETE","ELZA","EMA","EMMA","EMANUELLE","EMANUELLY","EMILY","EVA","EVELYN","EDDIE","EDGARD","EDMUNDI","EDSON","EDUARDO","EMMANUEL","ENZO","ERIC","EZEKIEL","NAO EXISTE"],["FELIPE","FABIAN","FABIANO","FABIO","FLAVIO","FABRICIO","FALCAO","FAUSTAO","FAUSTO","FERDINANDO","FERNANDO","FRANCISCO","FRANKLIN","FRED","FATIMA","FABIANA","FELICIA","FERNANDA","FIONA","FLOR","FLAVIA","FRANCIELE","FARNCINE","NAO EXISTE"],["GABRIEL","GALILEU","GARY","GASPAR","GASPARD","GEORGE","GERALDO","GERALT","GETULIO","GILBERTO","GUILHERME","GUSTAVO","GABRIELY","GABRIELA","GENOVA","GEORGIA","GEOVANA","GILDA","GISELE","GLORIA","GRACA","NAO EXISTE"],["HERIC","HAMILTON","HARRY","HAYDEN","HECTOR","HELENO","HENRIQUE","HENRY","HERCULES","HIPOLITO","HELIOS","HUGO","HANNAH","HELEN","HELOISA","HERA","HILARY","HILDA","NAO EXISTE"],["ISMAEL","IAGO","ICARO","IGOR","INACIO","IRINEU","ISAAC","ISAIAS","ISAQUE","ISRAEL","IVO","IARA","IASMIN","INDIA","IRIS","ISABEL","ISABELA","ISADORA","ISIS","IVONE","NAO EXISTE"],["JOSE","JAZIEL","JACINTO","JACOB","JACKSON","JACQUES","JAIR","JAMES","JASON","JEAN","JESUS","JOAO","JOEL","JOHN","JOSEFINO","JOSEPH","JUNIOR","JACQUELINE","JANAINA","JANE","JANICE","JASMIM","JENIFER","JOANA","JOELMA","JOICE","JULIE","JUSSARA","NAO EXISTE"],["KIMBERLIM","KALINE","KAREN","KATIA","KIM","KYARA","KAISER","KEANU","KEN","KIKO","KYLE","NAO EXISTE"],["LAURA","LARA","LAIS","LARISSA","LANA","LIVIA","LIDIA","LIGIA","LISA","LIZ","LORENA","LUA","LUCIA","LUIZA","LAWRENCE","LAZARO","LEANDRO","LUCIANO","LEO","LEON","LEONARDO","LEONIDAS","LINCOLN","LOGAN","LUCAS","LUAN","LUIZ","NAO EXISTE"],["MATEUS","MARCEL","MAX","MAGNO","MANOEL","MARK","MARCOS","MARIO","MARLON","MARTIN","MATTHEW","MAURICIO","MABEL","MAGDA","MAIA","MAFALDA","MAISA","MANOELA","MARIA","MARTHA","MATILDA","MONICA","MOANA","MURIEL","NAO EXISTE"],["NATHAM","NATANIEL","NASCIMENTO","NATA","NELSON","NEYMAR","NICHOLAS","NICOLAS","NICO","NOE","NOLAN","NATHALIA","NANCY","NAJA","NUBIA","NIDA","NORMA","NICOLE","NEUZA","NEIDE","NAJARA","NAO EXISTE"],["OSVALDO","ODAIR","ODIN","OLAVO","OLIMPO","OLIVER","OSMAR","ORION","OSCAR","OTO","OWEN","ODETE","OLGA","OLIVIA","NAO EXISTE"],["PAULO","PABLO","PATRICK","PATRICIO","PEDRO","PAUL","PERICLES","PETER","PITAGORAS","PALMIRINHA","PANDORA","PAOLA","PAULA","PENELOPE","PHILIPA","PRISCILA","NAO EXISTE"],["QUINTANA","QUENTIN","QUITERIA","QUINN","QUARESMA","QUELI","QUERUBIM","QUALY","QUEVIN","QUIRILO","NAO EXISTE"],["ROSELI","ROSE","RACHEL","RAQUEL","RAIMUNDA","RAPHAELA","RAFAELA","RAYSSA","REBECA","REGINA","RITA","ROBIN","RAFAEL","RAPHAEL","RAPHA","RAIMUNDO","RAMIRO","ROBERTO","RODOLFO","RENAN","RICK","NAO EXISTE"],["SANDRA","SALLY","SAMANTHA","SANDY","SARAH","SANDY","SANSA","SCARLETT","SELENA","SELMA","SALOMAO","SALES","SALAZAR","SALVADOR","SILVIO","SAM","SAMUEL","SANTIAGO","SCOTT","SEBASTIAO","SENA","NAO EXISTE"],["TIAGO","TADEU","TAYLOR","TEO","THIAGO","TOBIAS","TOM","TONY","TOMMY","TREVOR","TAIS","TAMARA","TANIA","TAUNE","TELMA","TERESINHA","THAIS","TIFFANY","NAO EXISTE"],["ULISSES","URIEL","UBALDO","UDO","ULRICH","UZIEL","URIEN","URANIA","URIELA","URSULA","NAO EXISTE"],["VICTOR","VALDIR","VALDO","VALENTE","VERISSIMO","VINICIUS","VIRGILIO","VITO","VIVALDI","VLADIMIR","VALENCIA","VALQUIRIA","VANIA","VELMA","VENUS","VERA","VERONICA","VICTORIA","VIOLETA","VIVIAN","VIVIANE","NAO EXISTE"],["WALDISNEY","WALT","WALTER","WAGNER","WELLINGTON","WILLIAM","WARREN","WESLEY","WILSON","WANDA","WENDY","WANESSA","WEST","WILMA","NAO EXISTE"],["XUXA","XANDRA","XENA","XENIA","XIMENA","XIOMARA","XAVIER","XENON","XICO","NAO EXISTE"],["YASMIN","YARA","YOLANDA","YAGO","YAN","YANNICK","YOUSSEF","YURI","YVES","YURAN","NAO EXISTE"],["ZEUS","ZAC","ZACAIAS","ZACHARY","ZAID","ZE","ZION","ZOLA","ZELIA","ZELMA","ZENAIDE","ZILDA","ZILMA","ZELDA","NAO EXISTE"] ];
+        //FEITO
+
+
+        //CEP
+        var DATABANKcep = [ ["AMAZÔNIA","ACRE","ATENAS","AMAPA","ALAGOAS","ALASCA","ARIZONA","AFEGANISTAO","ALBANIA","ALEMANHA","ANGOLA","ARGELIA","ARGENTINA","ARMENIA","AUSTRALIA","AUSTRIA","AZERBAIJAO","NAO EXISTE"],["BRASIL","BAGDA","BAKU","BANGCOC","BARCELONA","BAHIA","BAHAMAS","BARBADOS","BELARUS","BELGICA","BERMUDAS","BOLIVIA","BRUNEI","BULGARIA","BUTAO","NAO EXISTE"],["CAXIAS DO SUL","CABUL","CAIRO","CALIFORNIA","CANAA","CANELA","CEARA","COLORADO","CAMAROES","CANADA","CAZAQUISTAO","CHINA","CINGAPURA","COLOMBIA","CONGO","CUBA","NAO EXISTE"],["DINAMARCA","DALLAS","DAMASCO","DETROIT","DUBLIN","DUNKIRK","DAKOTA DO SUL","DELAWARE","DISTRITO FEDERAL","DOMINICA","DJIBUTI","NAO EXISTE"],["EGITO","ERECHIM","ESTEIO","ESPIRITO SANTO","EQUADOR","EL SALVADOR","ESLOVAQUIA","ESLOVENIA","ESTADOS UNIDOS","ESPANHA","ESTONIA","ETIOPIA","NAO EXISTE"],["FILIPINAS","FILADELFIA","FLORENCA","FORTALEZA","FRANCA","FLORIDA","FIJI","FINLANDIA","FORMOSA","FUNDAO","FULTON","NAO EXISTE"],["GRA-BRETANHA","GEORGETOWN","GOIANIA","GLORIA","GOLCALVES","GRAMADO","GREENVILLE","GEORGIA","GOIAS","GRECIA","GUATEMALA","NAO EXISTE"],["HIROSHIMA","HOLLYWOOD","HAVAI","HAITI","HONDURAS","HOLANDA","HUNGRIA","HIDALGO","HOUSTON","HUMAITA","NAO EXISTE"],["ISRAEL","IEMEN","INDIA","IRLANDA","ILHAS SOLOMAO","INDONESIA","IRAQUE","ISLANDIA","ITALIA","ILLINOIS","NAO EXISTE"],["JERUSALEM","JAMAICA","JERSEY","JAPAO","JORDANIA","JONGLEI","JURA","JUJUY","JUREMA","JURAMENTO","NAO EXISTE"],["KUWAIT","KOREA","KYOTO","KANSAS","KAZAQUISTAO","KENIA","KENTUCKY","KIEV","KINGSTON","KOPENHAGEN","KOSOVO","KUALA LUMPUR","NAO EXISTE"],["LAGOA","LAJEADO","LISBOA","LUISIANA","LAOS","LATVIA","LA PAMPA","LAGOS","LARIOJA","LIBIA","LIBERIA","LIBANO","LIBIA","LUEXEMBURGO","LITUANIA","NAO EXISTE"],["MARROCOS","MACAPA","MADRID","MANAUS","MONTEVIDEO","MONIQUE","MICHIGAN","MISSOURI","MARANHAO","MINNESOTA","MISSISSIPPI","MONTANA","MALASIA","MALTA","MEXICO","MONACO","MONTENEGRO","MONGOLIA","MOCAMBIQUE","MACAU","MALI","NAO EXISTE"],["NIGERIA","NATAL","NASSAU","NAPOLES","NAZARE","NEBRASKA","NEVADA","NOVA IORQUE","NOVO MEXICO","NIGERIA","NOVA JERSEI","NOVA ORLEANS","NICARAGUA","NEPAL","NORUEGA","NOVA ZELANDIA","NAO EXISTE"],["OSASCO","OSORIO","OHIO","OREGON","OMA","OAXACA","OBWALD","ONDO","OYO","OSUN","NAO EXISTE"],["PELOTAS","PALMAS","PANAMA","PARATY","PEQUIM","PARA","PARAIBA","PENSILVANIA","PIAUI","PORTUGAL","PERNAMBUCO","POLONIA","PERU","PORTO RICO","PAQUISTAO","NAO EXISTE"],["QUINTA","QATAR","QUIRGUISTAO","QUINTANA ROO","QUIXERE","QUIXADA","QUITO","QUISSAMA","QUITANDINHA","QUIXABA","NAO EXISTE"],["RONDONIA","RECIFE","RIACHUELO","ROMA","RONDONIA","RIO GRANDE","RIO GRANDE DO NORTE","RIO NEGRO","RIO DE JANEIRO","RORAIMA","REPUBLICA TCHECA","ROMENIA","RUSSIA","RUANDA","NAO EXISTE"],["SIRIA","SALVADOR","SANTIAGO","SOROCABA","SANTA CATARINA","SAO PAULO","SERGIPE","SAXONIA","SAN MARINO","SENEGAL","SERVIA","SOMALIA","SUECIA","SURINAME","SUICA","SUDAO","NAO EXISTE"],["TURQUIA","TAILANDIA","TAVARES","TORRES","TOCANTINS","TEXAS","TRUJILLO","TENNESSEE","TADJIQUISTAO","TANZANIA","TUNISIA","TIMOR LESTE","TAIWAN","NAO EXISTE"],["UZBEQUISTAO","UBERABA","UBERLANDIA","UTAH","UGANDA","UCRANIA","URUGUAI","URURCARA","URUSSANGA","UZLOVAIA","NAO EXISTE"],["VIENA","VACARIA","VALENCA","VANCOUVER","VARSOVIA","VITORIA","VERMONT","VIRGINIA","VENEZUELA","VIETNA","NAO EXISTE"],["WASHINGTON","WALLIS E FUTUNA","WELLINGTON","WAKAYAMA","WESTFALIA","NAO EXISTE"],["XANGAI","XANGRI-LA","XALAPA","XALISCO","XAMBIOA","XANTEN","XAPURI","XAXIM","XALATLACO","XAMBRE","NAO EXISTE"],["YEMEM","YUMA","NAO EXISTE"],["ZURIQUE","ZACARIAS","ZAMBIA","ZIMBABUE","ZULIA","ZACATECAS","ZUGO","ZAMFARA","ZUMPANGO","ZUCUALPAN","NAO EXISTE"] ];
+        //FEITO
+
+
+
+        //Fruta
+        var DATABANKfruta = [ ["ABACATE","ABACAXI","ABIU","ARACA","AZEITONA","ACAI","ACEROLA","AMEIXA","AMORA","ABRICO","ANONACEA","ATEMOYA","ABOBORA","NAO EXISTE"],["BABACO","BACABA","BACURI","BANANA","BARU","BURITI","BILIMBI","BIRIBA","BUTIA","NAO EXISTE"],["CABELUDINHA","CACAU","CAGAITA","CAJA-MANGA","CEREJA","CAIMITO","CAJA","CONDE","CUPUACU","CAJU","CALABACA","CARAMBOLA","CALABURA","COCO","CALAMONDIN","CAMBUCA","CAGAITA","CAMBUCI","CAQUI","NAO EXISTE"],["DAMASCO","DOVYALIS","DURIAO","NAO EXISTE"],["EMBAUBA","NAO EXISTE"],["FEIJOA","FIGO","FRAMBOESA","FRUTA-PAO","FRUTAS DO CERRADO","FRUTA-DO-CONDE","NAO EXISTE"],["GLICOSMIS","GOIABA","GRANADILLA","GRAVIOLA","GROSELHA","GRUMIXAMA","GUABIJU","GUABIROBA","GUARANA","GUARIROBA","NAO EXISTE"],["HAWTHORN","HEISTERIA","HIMBEERE","NAO EXISTE"],["IBACURUPARI","ILAMA","INGA","NAO EXISTE"],["JABUTICABA","JACA","JAMBO","JAMBOLAO","JARACATIA","JAMELAO","JATOBA","JENIPAPO","JERIVA","JUJUBA","NAO EXISTE"],["KIWI","NAO EXISTE"],["LANGSAT","LARANJA","LICHIA","LIMAO","LIMAS ACIDAS E DOCES","LONGAN","LUCUMA","NAO EXISTE"],["MABOLO","MACA","MACADAMIA","MAMAO","MAMEY","MAMONCILLO","MANA","MANGA","MANGABA","MANGOSTAO","MARACUJA","MORANGO","MARMELADINHA","MARMELO","MAROLO","MARULA","MASSALA","MELANCIA","MELAO","MELAO-DE-SAO-CAETANO","MIRTILO","MURICI","NAO EXISTE"],["NARANJILLA","NECTARINA","NESPERA","NONI","NOZ PECA","NAO EXISTE"],["OITI","OLHO-DE-BOI","NAO EXISTE"],["PEQUI","PERA","PESSEGO","PHYSALIS","PINHA","PINHAO","PISTACHE","PITANGA","PITANGAO","PITAYA","PITOMBA","PULASAN","PUPUNHA","NAO EXISTE"],["QUIUI","QUINA","NAO EXISTE"],["RAMBUTAO","ROMA","NAO EXISTE"],["SALAK","SANTOL","SAPOTI","SAPUCAIA","SERIGUELA","NAO EXISTE"],["TAIUVA","TAMARA","TAMARINDO","TANGERINA","TARUMA","TOMATE ARBOREO","TORANJA","NAO EXISTE"],["UMBU","UME","UVA","UVAIA","NAO EXISTE"],["VELUDO","NAO EXISTE"],["WAMPI","NAO EXISTE"],["XIXA","NAO EXISTE"],["YAMAMOMO","NAO EXISTE"],["ZIMBRO","ZITRONE","NAO EXISTE"] ];
+        //FEITO
+
+
+
+        //Cor
+        var DATABANKcor = [ ["AMARELO","AZUL","ANIL","AMETISTA","NAO EXISTE"],["BRANCO","BEGE","BORDO","NAO EXISTE"],["CINZA","CASTANHO","CIANO","NAO EXISTE"],["DOURADO","NAO EXISTE"],["ESMERALDA","NAO EXISTE"],["FUCSIA","FERRUGEM","NAO EXISTE"],["GELO","GRENA","NAO EXISTE"],["HERBAL","NAO EXISTE"],["INDIGO","NAO EXISTE"],["JADE","JAMBO","NAO EXISTE"],["NAO EXISTE"],["LARANJA","LAVANDA","LILAS","LIMA","NAO EXISTE"],["MARROM","MARFIM","MAGENTA","NAO EXISTE"],["NEVE","NAVAL","NAO EXISTE"],["OURO","OLIVA","OCRE","NAO EXISTE"],["PRETO","PRATA","NAO EXISTE"],["QUANTUM","NAO EXISTE"],["ROSA","ROXO","NAO EXISTE"],["SALMAO","SEPIA","SIENA","NAO EXISTE"],["TURQUESA","TRIGO","NAO EXISTE"],["URUCUM","NAO EXISTE"],["VERDE","VIOLETA","VERMELHO","NAO EXISTE"],["NAO EXISTE"],["NAO EXISTE"],["NAO EXISTE"],["NAO EXISTE"] ];
+        //FEITO
+
+
+        //Animal
+        var DATABANKanimal = [ ["ARARA","ABA-ABA","ABELHA","ABELHARUCO","ABETARDA","ABETOURO","ABIBE","ABRE ASA","ABROTEA","ABUTRE","ACANA","ACARI","ACARA","ACARO","ACAUA","ACOR","ACROBATA","ACURANA","ADAX","AGACHADEIRA MIRIM","NAO EXISTE"],["BOI","BACALHAU","BACILO","BACORA","BACURAU","BACURAUZINHO","BANDEJO","BAGRE","BAIACU","BAIANO","NAO EXISTE"],["CACHORRO","CAO","CADELA","CABRA","CABECA BRANCA","CABECA DE OURO","CABECA DE PRATA","CABECA ENCARNADA","CABECA SECA","CABECUDO","CABRINHA","CABURE","CACAO ANJO","CACAO","CACATUA","NAO EXISTE"],["DROMEDARIO","DAMAO","DANCADOR","DANCARINO DE CRISTA AMARELA","DEGOLADO","DEGU","DIABO DA TASMANIA","DINGO","DIABO ESPINHOSO","DONINHA","NAO EXISTE"],["ELEFANTE","EILEMA","EMA","ENGUIA","ENFERRUJADO","ENXADA","ESCORPIAO","ESCARAVELHO","ESPONJA","ESQUILO","ESTALADOR","NAO EXISTE"],["FOCA","FACOQUERO","FAIGAO DE BICO FINO","FAISAO","FALCAO","FALAROPO","FLAMINGO","FORMIGA","FRANGO","FLAUTISTA DO TEPUI","FIM-FIM","NAO EXISTE"],["GIRAFA","GAFANHOTO","GAIO","GAIVOTA","GALEIRAO","GALINHA","GALO","GAMBA","GANSO","GAMO","NAO EXISTE"],["HIPOPOTAMO","HADOQUE","HALICORES","HAMSTER","HARPIA","HIENA","HILOQUERO","HIRAX","NAO EXISTE"],["IGUANA","IAQUE","IBEX","IBIS","IGUANINHA","IGUANA","IHAMA","IMPALA","IDRI","INHAMBU","IRARA","NAO EXISTE"],["JACARE","JABIRU","JABUTI","JACAMARACU","JACANA","JACU","JAGUAR","JAMANTA","JANAUIRA","JAGUANE","NAO EXISTE"],["KAKAPO","KOALA","KOKABURRA","NAO EXISTE"],["LONTRA","LACRAIA","LAGARTO","LAGARTIXA","LAGOSTA","LAMBARI","LAMPREIA","LAVANDEIRA","LEAO","LEBRE","LEOPARDOR","LIBELULA","LHAMA","NAO EXISTE"],["MACACO","MACARIQUINHO","MACUCO","MARSUPIAL","MACURU","MAE DA LUA","MAE DA TAOCA","MANGUARI","MANDI","MARAPA","MARIA BICUDINHA","NAO EXISTE"],["NAJA","NARCEJA","NARCISO","NARVAL","NEINEI","NEON","NINQUIM","NOIVINHA","NUTRIA","NAJA INDIANA","NAJA CUSPIDEIRA","NAO EXISTE"],["ORNITORRINCO","ONCA","OSTRA","OVELHA","OURICO","OSTRACEIRO","OTOCION","OSGA","ORCA","ORANGOTANGO","ONCINHA","NAO EXISTE"],["PATO","PACU","PANDA","PANTERA","PAPAGAIO","PAPA TERRA","PARDAL","PERU","PATO","PAVAO","PEIXE","NAO EXISTE"],["QUERO-QUERO","QUEBRA NOZES","QUETE","QUETZAL","QUATIPURU","QUELEA","QUETE","QUIRIQUIRI","QUIMERA","QUEIXADA","NAO EXISTE"],["RATO","RA","RAPOZA","RATAZANA","RINOCERONTE","REMORA","RENA","RENDADINHO","RENDEIRA","ROBALO","NAO EXISTE"],["SAPO","SABIA","SABOGA","SACI","SAGUI","SALMAO","SALAMANDRA","SARACURA","SARDINHA","SAUVA","NAO EXISTE"],["TARTARUGA","TAMANDUA","TATU","TECELAO","TEXUGO","TICO TICO","TIGRE","TORDO","TOURO","TREPADOR","NAO EXISTE"],["URUBU","URSO","UACARI","UARU","UDU","UBARANA","UIRAPURU","URSO POLAR","URUBUZINHO","NAO EXISTE"],["VEADO","VACA","VESPA","VIBORA","VIUVA NEGRA","VITE VITE","VICUNHA","VERDINHO","VESPA GIGANTE ASIATICA","VERDILHAO","NAO EXISTE"],["WOMBAT","NAO EXISTE"],["XIMANGO","XAREU","XERELETE","XEXEU","XIXARRO","NAO EXISTE"],["YORKSHIRE","NAO EXISTE"],["ZEBRA","ZABELE","ZARAGATEIRO","ZARRO","ZABELE","ZEBU","ZIDEDE","ZOMBETEIRO","ZORRILHO","ZOMBETEIRO VERDE","NAO EXISTE"] ];
+        //FEITO
+
+
+        //Obj
+        var DATABANKobj = [ ["ARMA","ABACO","ABAFADOR","ABAJUR","ABRACADEIRA","ABRE-LATAS","ACORDEAO","ACUCAREIRO","ADAGA","ADAPADOR","AEROFOLIO","NAO EXISTE"],["BANCO","BAFOMETRO","BAGAGEIRO","BAIONETA","BAIXO","BALACLAVA","BALAIO","BALANCA","BALAO","BALSA","BAMBOLE","NAO EXISTE"],["CINZAS","CABIDE","CACAROLA","CACHIMBO","CADEADO","CADEIRA","CADERNO","CAFETEIRA","CAIXAO","CAJADO","CALDEIRAO","NAO EXISTE"],["DARDO","DADO","DARDO","DEDAL","DELINEADOR","DEPILADOR","DESENTUPIDOR","DESFRIBILADOR","DESINFETANTE","DESODORANTE","DESPERTADOR","NAO EXISTE"],["ESMERALDA","ENCHARPE","EDREDOM","EIXO","ELASTICO","ELEVADOR","ELMO","EMBREAGEM","ENCERADEIRA","ENGATE","ENGRENAGEM","NAO EXISTE"],["FUSCA","FACA","FACAO","FAGOTE","FANTASIA","FANTOCHE","FAROL","FAX","FERRADURA","FERRAMENTA","FERRO DE PASSAR","NAO EXISTE"],["GELO","GUITARRA","GAIOLA","GAITA","GANCHO","GANGORRA","GARFO","GARGANTILHA","GARRAFA","GAVETA","GELADEIRA","GEL","NAO EXISTE"],["HARPA","HASTE","HELICE","HELICOPTERO","HELIOSTATO","HIDRANTE","HIDRATANTE","HOLOFOTE","HOME THEATER","HOSTIA","NAO EXISTE"],["IATE","IMPRESSORA","INALADOR","INCENSO","INGRESSO","INJETOR","INTERFONE","INTERRUPTOR","IOIO","ISOLADOR","ISQUEIRO","IMA","NAO EXISTE"],["JAULA","JALECO","JANELA","JANGADA","JAQUETA","JARRA","JATO","JOAO BOBO","JOGO DA MEMORIA","JOGO DE DAMAS","JOIA","JORNAL","NAO EXISTE"],["KUKRI","NAO EXISTE"],["LANTERNA","LACO","LACRE","LA DE ACO","LAMINA","LAMPADA","LAMPARINA","LAMPIAO","LANCA-GRANADAS","LANCHEIRA","LANTEJOULA","NAO EXISTE"],["MOUSE","MACA","MACACO","MACANETA","MACARICO","MACHADO","MAIO","MALA","MAMADEIRA","MANEQUIM","MAGUEIRA","MANIVELA","NAO EXISTE"],["NEVE","NADADEIRA","NAVALHA","NAVE ESPACIAL","NAVIO","NEBULIZADOR","NETBOOK","NOTEBOOK","NEUTRALIZADOR DE ODORES","NOVELO","NAO EXISTE"],["OURO","OCARINA","OCULOS","ODOMETRO","ODONTOSCOPIO","OFTALMOSCOPIO","OLHO MAGICO","OMBREIRA","ORELHAO","ORGAO","OSTETOSCOPIO","OXIGENADOR","NAO EXISTE"],["PINCEL","PA","PALETO","PALHETA","PALMILHA","PANDEIRO","PANELA","PANO","PANTUFA","PAPEL","PAPIRO","PARA-RAIOS","NAO EXISTE"],["QUENA","QUADRICICLO","QUADRO","QUADRO DE BICICLETA","QUADRO NEGRO","QUEBRA-CABECA","QUEBRA-NOZES","QUEPE","QIMONO","QUINRICLAVE","NAO EXISTE"],["ROSA","RADAR","RADIO","RAIO DE BICICLETA","RALADOR","RALO","RAQUETE","RATOEIRA","REBITE","REDE","REDEA","NAO EXISTE"],["SABAO","SABONETE","SABONETEIRA","SABRE","SACA-ROLHAS","SACO","SACOLA","SAIA","SALEIRO","SANDALIA","SANFONA","NAO EXISTE"],["TRAILER","TELEFONE","TABUA DE PASSAR","TABUA DE CARNE","TAMPA","TESOURA","TERMOMETRO","TRAMPOLIM","TALISMA","TACO","NAO EXISTE"],["UBER","URSINHO DE PELUCIA","UNHA","UNIFORME","URNA","UKULELE","UMIDIFICADOR","ULTRABOOK","UDOGRAFO","URETEROSCOPIO","NAO EXISTE"],["VIDRO","VAPORIZADOR","VARETA","VASO","VASO SANITARIO","VEU","VIDEO CASSETE","VIDEO GAME","VIOLAO","VELOCIMETRO","NAO EXISTE"],["WINDOWS","NAO EXISTE"],["XADREZ","XAWUERE","XILOFONE","XALE","XICARA","XILOGRAVURA","NAO EXISTE"],["YAKULT","NAO EXISTE"],["ZIPER","ZABUMBA","ZAFU","ZARABATANA","ZOOTROPO","ZABUTON","ZAMPRONA","NAO EXISTE"] ];
+         //FEITO
+
+
+        //Carro
+        var DATABANKcarro = [ ["AGERA","ASTRA","AUDI","ALFA ROMEO","AURORA","NAO EXISTE"],["BUGATTI","BENTLEY","BELINA","BMW","NAO EXISTE"],["COROLLA","CADILLAC","CAMARO","CORECEL","NAO EXISTE"],["DODGE","DELOREAN","DEL REY","DINO","NAO EXISTE"],["ECLIPSE","ECOSPORT","ENVEMO","EVASION","NAO EXISTE"],["FERRARI","FORD","FOCUS","FUSION","FIAT","NAO EXISTE"],["GURGEL","GUGEL","GENERAL MOTORS","GORDINI","GALAXIEL","NAO EXISTE"],["HONDA","HUMMER","HYUNDAI","HOMBRE","NAO EXISTE"],["IMPALA","I30","ISUZU","IPANEMA","NAO EXISTE"],["JAGUAR","JOURNEY","JIMNY","JEEP","NAO EXISTE"],["KOMBI","KIA","KADETT","KA","NAO EXISTE"],["LAMBORGHINI","LEXUS","LEBARON","LAND ROVER","LINCOLN","NAO EXISTE"],["MCLAREN","MONZA","MUSTANG","MAVERICK","NAO EXISTE"],["NISSAN","NEON","NAO EXISTE"],["OPALA","OLDSMOBILE","OMEGA","NAO EXISTE"],["PEUGEOT","PARATI","PUNTO","PORSHE","NAO EXISTE"],["QUANTUM","QUATTROPORTE","QUASHQAI","NAO EXISTE"],["RENAULT","NAO EXISTE"],["SANTANA","NAO EXISTE"],["TOYOTA","NAO EXISTE"],["UNO","NAO EXISTE"],["VOLVO","NAO EXISTE"],["WINDSTAR","NAO EXISTE"],["XAVANTE","NAO EXISTE"],["YAMAHA","NAO EXISTE"],["ZAGATTO","NAO EXISTE"] ];
+        //FEITO
+
+        //Esporte
+
+        var DATABANKesporte = [ [ "ARREMESSO", "AIKIDO", "ATLETISMO", "AUTOMOBILISMO","NAO EXISTE" ],[ "BOXE", "BASQUETEBOL", "BASKET", "BEISEBOL","NAO EXISTE" ],[ "CORRIDA", "CANOAGEM", "CICLISMO","NAO EXISTE" ],[ "DAMA", "DECATLO","NAO EXISTE" ],[ "ESGRIMA", "EQUITACAO", "ESCALADA","NAO EXISTE"],["FUTEBOL","FUTSAL","FISICULTURISMO","NAO EXISTE"],["NAO EXISTE","GOLFE","GINASTICA"],["NAO EXISTE","HOQUEI","HEPTATLO","HIPISMO"],["NAO EXISTE","I CHUAN","IATISMO"],["JUDO","JIU-JITSU","NAO EXISTE"],["KARATE","NAO EXISTE"],["LUTA","LACROSSE","LANCAMENTO DE DISCO","NAO EXISTE"],["MOTOCICLISMO","MARATONA","MERGULHO","NAO EXISTE"],["NATACAO","NETBOL","NINJUSTU","NAO EXISTE"],["ORIENTACAO","NAO EXISTE"],["PARKOUR","PATINACAO","PESCA","NAO EXISTE"],["QUEIMADA","QUIMBOL","NAO EXISTE"],["RAPEL","REMO","RUGBY","NAO EXISTE"],["SALTO","SKATE","SURFE","NAO EXISTE"],["TIRO AO ALVO","TAEKWWONDO","TENIS","TREKKING","NAO EXISTE"],["ULTIMATE FRISBEE","NAO EXISTE"],["VOLEIBOL","VAQUEJADA","VELA","VOLEIBOL","NAO EXISTE"],["WINDSTAR","WAKEBOARD","NAO EXISTE"],["XADREZ","NAO EXISTE"],["NAO EXISTE"],["ZARABATANA","NAO EXISTE"] ];   
+
+        var VOLTARaomenu = "N";       
+
+        //RESPOSTAS JOGADOR
+
+        var respnomejogador = "";
+
+        var respcepjogador = "";
+
+        var respfrutajogador = "";
+
+        var respcorjogador = "";  
+
+        var respanimaljogador = "";
+
+        var respobjetojogador = "";
+
+        var respcarrojogador = "";
+
+        var respesportejogador = "";
+
+        //PONTUAÇÃO
+
+        var pontsjogador = 0;
+
+        var pontspc = 0;
+
+        //LAYOUT
+
+        var mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+        for( ; VOLTARaomenu == "N" && VOLTARaomenu != "S" ; ){
+
+           var letra = [ "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+           var crandom = Math.floor(Math.random()*25);
+
+           var letrajogo = letra[crandom];
+
+           alert("A LETRA SORTEADA FOI A LETRA "+letrajogo);
+
+           var preenchido = "N";
+
+           //ISTO SERVE PARA LIMPAR AS LACUNAS
+           respnomejogador = "";
+           respcepjogador = "";
+           respfrutajogador = "";
+           respcorjogador = "";  
+           respanimaljogador = "";
+           respobjetojogador = "";
+           respcarrojogador = "";
+           respesportejogador = "";
+
+           mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+
+           //FOR EM QUE O JOGADOR PREENCHE AS LACUNAS
+
+           for( ; preenchido == "N" && preenchido != "S" ; ){
+
+              alert(mapastop);
+
+              var onde = prompt("Qual categoria desejas preencher?\nA letra é "+letrajogo+"\nSe desejas sair para o menu, digite 'sair'.\nSe terminasses, digite 'preenchido'.\n\n"+mapastop);
+
+              //Caso jogador queira sair
+              if( onde == "sair" || onde == "SAIR" ){
+
+                preenchido = "S";
+
+                VOLTARaomenu = "S";        
+
+              }
+
+              //Caso jogador tenha terminado
+              if( onde == "preenchido" || onde == "PREENCHIDO" ){
+
+                preenchido = "S";        
+
+              }
+
+              //Caso o jogador queira definir um nome
+              if( onde == "nome" || onde == "NOME" ){
+
+                respnomejogador = prompt("Por favor, digite o nome que começe com a letra "+letrajogo+": ");
+                respnomejogador = respnomejogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir um cep
+              if( onde == "cep" || onde == "CEP" ){
+
+                respcepjogador = prompt("Por favor, digite o nome de uma cidade, país ou estado que começe com a letra "+letrajogo+": ");
+                respcepjogador = respcepjogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir uma fruta
+              if( onde == "fruta" || onde == "FRUTA" ){
+
+                respfrutajogador = prompt("Por favor, digite o nome de uma fruta que começe com a letra "+letrajogo+": ");
+                respfrutajogador = respfrutajogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir uma cor
+              if( onde == "cor" || onde == "COR" ){
+
+                respcorjogador = prompt("Por favor, digite o nome de uma cor que começe com a letra "+letrajogo+": ");
+                respcorjogador = respcorjogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir um animal
+              if( onde == "animal" || onde == "ANIMAL" ){
+
+                respanimaljogador = prompt("Por favor, digite o nome de um animal que começe com a letra "+letrajogo+": ");
+                respanimaljogador = respanimaljogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir um objeto
+              if( onde == "objeto" || onde == "OBJETO" ){
+
+                respobjetojogador = prompt("Por favor, digite o nome de um objeto que começe com a letra "+letrajogo+": ");
+                respobjetojogador = respobjetojogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir um carro
+              if( onde == "carro" || onde == "CARRO" ){
+
+                respcarrojogador = prompt("Por favor, digite o nome de um carro que começe com a letra "+letrajogo+": ");
+                respcarrojogador = respcarrojogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+              //Caso o jogador queira definir um esporte
+              if( onde == "esporte" || onde == "ESPORTE" ){
+
+                respesportejogador = prompt("Por favor, digite o nome de um esporte que começe com a letra "+letrajogo+": ");
+                respesportejogador = respesportejogador.toUpperCase();
+
+                mapastop = "|__NOME__|\n  "+respnomejogador+"\n"+"|__CEP__|\n   "+respcepjogador+"\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n"+"|__COR__|\n  "+respcorjogador+"\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n"+"|__OBJETO__|\n"+respobjetojogador+"\n"+"|__CARRO__|\n  "+respcarrojogador+"\n"+"|__ESPORTE__|\n  "+respesportejogador;
+
+              }
+
+           }//FOR DURANTE PREENCHIMENTO
+
+           var cnome = Math.floor(Math.random()*DATABANKnome[crandom].length-1);
+           if(cnome == -1 ){
+             cnome = 0
+           }
+           var respnomepc = DATABANKnome[crandom][cnome];
+
+           var ccep = Math.floor(Math.random()*DATABANKcep[crandom].length-1);
+           if(ccep == -1 ){
+             ccep = 0
+           }
+           var respceppc = DATABANKcep[crandom][ccep];
+
+           var cfruta = Math.floor(Math.random()*DATABANKfruta[crandom].length-1);
+           if(cfruta == -1 ){
+             cfruta = 0
+           }
+           var respfrutapc = DATABANKfruta[crandom][cfruta];
+
+           var ccor = Math.floor(Math.random()*DATABANKcor[crandom].length-1);
+           if(ccor == -1 ){
+             ccor = 0
+           }
+           var respcorpc = DATABANKcor[crandom][ccor];
+
+           var canimal = Math.floor(Math.random()*DATABANKanimal[crandom].length-1);
+           if(canimal == -1 ){
+             canimal = 0
+           }
+           var respanimalpc = DATABANKanimal[crandom][canimal];
+
+           var cobj = Math.floor(Math.random()*DATABANKobj[crandom].length-1);
+           if(cobj == -1 ){
+             cobj = 0
+           }
+           var respobjpc = DATABANKobj[crandom][cobj];
+
+           var ccarro = Math.floor(Math.random()*DATABANKcarro[crandom].length-1);
+           if(ccarro == -1 ){
+             ccarro = 0
+           }
+           var respcarropc = DATABANKcarro[crandom][ccarro];
+
+           var cesporte = Math.floor(Math.random()*DATABANKesporte[crandom].length-1);
+           if(cesporte == -1 ){
+             cesporte = 0
+           }
+           var respesportepc = DATABANKesporte[crandom][cesporte];
+
+           alert("AS SUAS RESPOSTAS FORAM: \n"+mapastop+"\nJÁ AS DO PC FORAM: \n"+respnomepc+", "+respceppc+", "+respfrutapc+", "+respcorpc+", "+respanimalpc+", "+respobjpc+", "+respcarropc+", "+respesportepc);
+
+           //RESPOSTAS JOGADOR
+           if( DATABANKnome[crandom].indexOf(respnomejogador) != -1 && respnomejogador != "NAO EXISTE" ){
+             if( respnomejogador == respnomepc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respnomejogador != respnomepc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }  
+
+           if( DATABANKcep[crandom].indexOf(respcepjogador) != -1 && respcepjogador != "NAO EXISTE" ){
+             if( respcepjogador == respceppc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respcepjogador != respceppc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }
+
+            if( DATABANKfruta[crandom].indexOf(respfrutajogador) != -1 && respfrutajogador != "NAO EXISTE" ){
+             if( respfrutajogador == respfrutapc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respfrutajogador != respfrutapc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }
+
+           if( DATABANKcor[crandom].indexOf(respcorjogador) != -1 && respcorjogador != "NAO EXISTE" ){
+             if( respcorjogador == respcorpc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respcorjogador != respcorpc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }
+
+           if( DATABANKanimal[crandom].indexOf(respanimaljogador) != -1 && respanimaljogador != "NAO EXISTE" ){
+             if( respanimaljogador == respanimalpc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respanimaljogador != respanimalpc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }
+
+           if( DATABANKobj[crandom].indexOf(respobjetojogador) != -1 && respobjetojogador != "NAO EXISTE" ){
+             if( respobjetojogador == respobjpc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respobjetojogador != respobjpc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }       
+
+           if( DATABANKcarro[crandom].indexOf(respcarrojogador) != -1  && respcarrojogador != "NAO EXISTE" ){
+              if( respcarrojogador == respcarropc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respcarrojogador != respcarropc ){ 
+               pontsjogador = pontsjogador + 10;
+             }             
+
+           }
+
+           if( DATABANKesporte[crandom].indexOf(respesportejogador) != -1 && respesportejogador != "NAO EXISTE" ){
+             if( respcarrojogador == respcarropc ){ 
+               pontsjogador = pontsjogador + 5;
+             }
+             if( respesportejogador != respesportepc ){ 
+               pontsjogador = pontsjogador + 10;
+             }
+
+           }
+
+           //RESPOSTAS PC
+           if( respnomepc != "NAO EXISTE" ){
+             if( respnomejogador == respnomepc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respnomejogador != respnomepc ){ 
+               pontspc = pontspc + 10;
+             }
+
+           }           
+
+           if( respceppc != "NAO EXISTE" ){
+             if( respcepjogador == respceppc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respcepjogador != respceppc ){ 
+               pontspc = pontspc + 10;
+             }
+
+           }
+
+            if( respfrutapc != "NAO EXISTE" ){
+             if( respfrutajogador == respfrutapc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respfrutajogador != respfrutapc ){ 
+               pontspc = pontspc + 10;
+             }
+
+            }
+
+           if( respcorpc != "NAO EXISTE" ){
+             if( respcorjogador == respcorpc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respcorjogador != respcorpc ){ 
+               pontspc = pontspc + 10;
+             }
+
+           }
+
+           if( respanimalpc != "NAO EXISTE" ){
+             if( respanimaljogador == respanimalpc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respanimaljogador != respanimalpc ){ 
+               pontspc = pontspc + 10;
+             }   
+
+           }
+
+           if( respobjpc != "NAO EXISTE" ){
+             if( respobjetojogador == respobjpc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respobjetojogador != respobjpc ){ 
+               pontspc = pontspc + 10;
+             }
+
+           }
+
+           if( respcarropc != "NAO EXISTE" ){
+             if( respcarrojogador == respcarropc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respcarrojogador != respcarropc ){ 
+               pontspc = pontspc + 10;
+             }
+
+           }
+
+           if( respesportepc != "NAO EXISTE" ){
+             if( respesportejogador == respesportepc ){ 
+               pontspc = pontspc + 5;
+             }
+             if( respesportejogador != respesportepc ){ 
+               pontspc = pontspc + 10;
+             }
+
+           }
+
+           alert("PONTUAÇÃO\n\nVOCÊ - "+pontsjogador+"\n\nPC - "+pontspc);
+
+        }//FOR DENTRO DO FOR DO JOGO
+
+     }//FOR DO JOGO
+
+   alert("LOADING...")
+   mov = 1;
+   }//IF DE JOGAR
+
+}//FOR DO JOGO INTEIRO
+
+

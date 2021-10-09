@@ -1,0 +1,89 @@
+//While
+
+while( condicao ){
+     comandos;
+}
+
+      //Exemplo
+
+c=1
+while(c<=10){
+     console.log(c);
+     c++;
+}
+
+//Do-While
+
+do{
+   ...
+   ...
+}while( condição );
+
+      //Exemplo  
+
+c=1;
+do{
+   console.log(c);
+   c++;
+}while( c<=10 )
+
+//FOR
+
+for( inicialização; condição; incrementação ){
+   ...
+}
+
+//Exemplo
+
+for( c=1; c<=10; c++ ){
+   console.log(c);
+}
+
+//Ou
+for( c=1o; c>=1; c-- ){
+   console.log(c);
+}
+
+
+
+///Fazer um programa que leia um número e verifica se ele é perfeito. Um número perfeito é aquele que é igual a soma dos seus divisores inteiros ( Exeto o próprio número ). O programa deve exibir os divisore do número e a soma deles.
+
+var n=parseInt(prompt("Indique um número: "));
+var s;
+var c=n;
+for ( ; c>=1; ){
+   c--;
+   if( n%c==0 ){
+     var a="Os número que são divisores de "+n+" são: "
+     s=s+c;
+     a=a+c+" , ";
+   }
+   if(a==n){
+     alert(n+" é perfeito!");
+   }  
+}alert(a+" enquanto a soma deles é de: "+s);
+
+//Não consegui, fazer de novo
+
+//Ex 2 - Digamos que o número de chinchilas de uma fazenda triplica a cada ano, após o primeiro ano. Elaborar um programa que leia o número inicial de chinchilas e anos e informe ano a ano o número médio previsto de chinchilas na fazenda. Validar a entrada para que o número inicial de chinchilas seja maior ou igual a dois ( em casal )
+
+//Ex 3- Elaborar um programa que leia um número e exiba * na página em linhas diferêntes. A cada nova linha o número de * deve ser incrementado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

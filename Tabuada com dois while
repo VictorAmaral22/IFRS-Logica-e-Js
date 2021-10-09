@@ -1,0 +1,11 @@
+var c1,c2,n,t;
+c1=1;
+while(c1<=10){
+c2=1
+while(c2<=10){
+t=n*c2;
+console.log(c2+" x "+c2+" = "+t+"\n");
+c2+=1;
+}
+c2+=1;
+} algo mais ou menos assim

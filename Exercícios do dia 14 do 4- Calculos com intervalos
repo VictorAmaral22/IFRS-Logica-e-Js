@@ -1,0 +1,56 @@
+1. Calcular a metade do intervalo entre duas datas (D1,M1,A1) e (D2,M2,A2), considerando meses de 30 dias. 
+
+var D1,M1,A1,D2,M2,A2,da,dm,dd;
+D1=parseFloat(prompt("Insira o dia da data 1: "));
+M1=parseFloat(prompt("Insira o mês da data 1: "));
+A1=parseFloat(prompt("Insira o ano da data 1: "));
+D2=parseFloat(prompt("Insira o dia da data 2: "));
+M2=parseFloat(prompt("Insira o mês da data 2: "));
+A2=parseFloat(prompt("Insira o ano da data 2: "));
+da=((A2-A1)*360);
+dm=Math.abs((M1-M2)*30);
+dd=Math.abs(D1-D2);
+metade=(da+dm+dd)/2;
+alert ("A metade da diferênça entre as duas datas é de "+metade+" dias");
+
+2. Calcular quantos segundos existem entre dois horários fornecidos (H1,M1,S1) e (H2,M2,S2).
+
+var H1,M1,S1,H2,M2,S2,horassegundos,minutossegundos,seg,segundost;
+H1=parseFloat(prompt("Insira as horas do horário 1: "));
+M1=parseFloat(prompt("Insira os minutos do horário 1: "));
+S1=parseFloat(prompt("Insira os segundos do horário 1: "));
+H2=parseFloat(prompt("Insira as horas do horário 2: "));
+M2=parseFloat(prompt("Insira os minutos do horário 2: "));
+S2=parseFloat(prompt("Insira os segundos do horário 2: "));
+horassegundos=((Math.abs(H2-H1))*3600);
+minutossegundos=(Math.abs((M1-M2)*60));
+seg=(Math.abs(S1-S2));
+segundost=(seg+horassegundos+minutossegundos);
+alert ("A diferênça em segundos entre os dois horários é de "+segundost+" segundos");
+
+3. Calcular a próxima posição (PP) e a posição anterior (PA) em uma lista circular, considerando uma determinada posição e o tamanho da lista.
+Ex: lista tamanho 3 (0 1 2)
+P=0 PP=1  PA=2
+P=1 PP=2  PA=0
+P=2 PP=0  PA=1
+
+//Peço desculpas, pois não cheguei a uma resposta.
+//Estas são anotações que fiz.
+tl=parseFloat(prompt("Insira o tamanho da lista: "));
+Tamanho da lista é 2
+(0,1)
+p=0
+pp=1
+pa=1
+
+(Math.abs(((p+(Math.floor(Math.sqrt(t))))/t)-1))) 
+
+
+pp=p-(t+1)
+
+
+Math.ceil((Math.abs(((p+p)-(t+1)+t)+2)/t*2))
+
+
+
+

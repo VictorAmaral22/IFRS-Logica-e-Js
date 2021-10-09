@@ -1,0 +1,256 @@
+       //Fase 3
+       if( fases == "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--\n\n\nSe quiseres sair, digite: sair."){
+         //Fase 3
+         var sair = "n";
+         while( sair != "s" ){
+              //Números da tabela
+              var a1=3
+              var a2=" "
+              var a3=2
+              var a4=1
+              //Posições na fileira B
+              var b1=" "
+              var b2=1
+              var b3=3
+              var b4=" "
+              //Posições na fileira C
+              var c1=4
+              var c2=" "
+              var c3=" "
+              var c4=" "
+              //Posições na fileira D 
+              var d1=" "
+              var d2=3
+              var d3=" "
+              var d4=2
+
+              //Tabela
+              var quadro="__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+
+              //Condição para que o jogo não acabe até serem preenchidos todos os espaços
+              while( a2 == " " || b1 == " " || b4 == " " || c2 == " " || c3 == " " || c4 == " " || d1 == " " || d3 == " " ){
+                   var posicao = prompt( "ONDE DESEJAS COLOCAR UM NÚMERO?(RESPONDA EM COORDENADAS)\n"+quadro+"\nPara sair do jogo, basta digitar > sair, ao escolher uma posição. ");
+                   if( posicao == "sair" || posicao == "Sair" || posicao == "SAIR" ){
+                     alert("SAINDO...");
+                     sair = "s";
+                     a2 = 4;
+                     b1 = 2;
+                     b4 = 4;
+                     c2 = 2;
+                     c3 = 1;
+                     c4 = 3;
+                     d1 = 1;
+                     d3 = 4;
+                   } 
+
+
+                   //Casos em que o jogador não pode botar um número na posição desejada
+                   if( posicao == "A2" || posicao == "a2" || posicao == "2A" || posicao == "2a" || posicao == "b1" || posicao == "B1" || posicao == "1b" || posicao == "1B" || posicao == "b4" || posicao == "B4" || posicao == "4b" || posicao == "4B" || posicao == "c2" || posicao == "C2" || posicao == "2c" || posicao == "2C" || posicao == "c3" || posicao == "C3" || posicao == "3c" || posicao == "3C" || posicao == "c4" || posicao == "C4" || posicao == "4c" || posicao == "4C" || posicao == "d1" || posicao == "D1" || posicao == "1d" || posicao == "1D" || posicao == "d3" || posicao == "D3" || posicao == "3d" || posicao == "3D" ){
+                     alert("TU NÃO PODES BOTAR UM NÚMERO NESTA POSIÇÃO!");
+                   } 
+
+
+                   //A2
+                   //Caso o jogador decida colocar um número na posição A2
+                   if( posicao == "A2" || posicao == "a2" || posicao == "2A" || posicao == "2a" ){
+                     a2 = prompt(" QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO A2? \n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                     if( a2 != "cancelar" && a2 != "CANCELAR" && a2 != "Cancelar" ){
+                       //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                       while( a2 == a1 || a1 == a3 || a2 == a4 || a2 == b2 || a2 == c2 || a2 == d2 || a2<1 || a2>4 || isNaN(a2) ){
+                            a2 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO A2:\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                            if( a2 == "cancelar" || a2 == "CANCELAR" || a2 == "Cancelar" ){ 
+                              var canw = "s"
+                              a2 = 4;  
+                            }
+                       } 
+                       //Caso o jogador acerte o número
+                       if( a2 != a1 && a2 != a3 && a2 != a4 && a2 != b2 && a2 != c2 && a2 != d2 && 1<= a2 <=4 && a2!=(isNaN(a2)) && canw != "s"){
+                         quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                       }            
+                     }
+                     if( a2 == "cancelar" || a2 == "CANCELAR" || a2 == "Cancelar" || canw == "s" ){ 
+                       a2 = " ";  
+                       quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                     }
+                   }canw = "n"
+
+
+
+                   //B1
+                   //Caso o jogador decida colocar um número na posição B1
+                   if( posicao == "B1" || posicao == "b1" || posicao == "1B" || posicao == "1b" ){
+                     b1 = prompt( " QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO B1?\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                     if( b1 != "cancelar" && b1 != "CANCELAR" && b1 != "Cancelar" ){
+                       //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                       while( b1 == b2 || b1 == b3 || b1 == b4 || b1 == a1 || b1 == c1 || b1 == d1 || b1<1 || b1>4 || isNaN(b1)){
+                            b1 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO B1:\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                            if( b1 == "cancelar" || b1 == "CANCELAR" || b1 == "Cancelar" ){ 
+                              var canw = "s"
+                              b1 = 2;  
+                            }
+                       }    
+                       //Caso o jogador acerte o número
+                       if( b1 != b2 && b1 != b3 && b1 != b4 && b1 != a1 && b1 != c1 && b1 != d1 && 1<= b1 <=4 && b1!=(isNaN(b1)) && canw != "s" ){
+                         quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                       }
+                     }
+                     if( b1 == "cancelar" || b1 == "CANCELAR" || b1 == "Cancelar" || canw == "s" ){ 
+                       b1 = " ";  
+                       quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                     }            
+                   }canw = "n"
+
+
+                   //B4
+                   //Caso o jogador decida colocar um número na posição B4
+                   if( posicao == "B4" || posicao == "b4" || posicao == "4B" || posicao == "4b" ){
+                     b4 = prompt( " QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO B4?\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                     if( b4 != "cancelar" && b4 != "CANCELAR" && b4 != "Cancelar" ){
+                       //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                       while( b4 == b1 || b4 == b2 || b4 == b3 || b4 == a4 || b4 == c4 || b4 == d4 || b4<1 || b4>4 || isNaN(b4)){
+                            b4 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO B4:\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                            if( b4 == "cancelar" || b4 == "CANCELAR" || b4 == "Cancelar" ){ 
+                              var canw = "s"
+                              b4 = 4;  
+                            }
+                       }  
+                       //Caso o jogador acerte o número
+                       if( b4 != b1 && b4 != b2 && b4 != b3 && b4 != a4 && b4 != c4 && b4 != d4 && 1<= b4 <=4 && b4!=(isNaN(b4)) && canw != "s" ){
+                         quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                       }
+                     }
+                     if( b4 == "cancelar" || b4 == "CANCELAR" || b4 == "Cancelar" || canw == "s" ){ 
+                       b4 = " ";  
+                       quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                     }
+                   }canw = "n"
+
+
+                   //C2
+                   //Caso o jogador decida colocar um número na posição C2
+                   if( posicao == "C2" || posicao == "c2" || posicao == "2C" || posicao == "2c" ){
+                      c2 = prompt( "QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO C2?\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                      if( c2 != "cancelar" && c2 != "CANCELAR" && c2 != "Cancelar" ){
+                        //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                        while( c2 == c1 || c2 == c3 || c2 == c4 || c2 == a2 || c2 == b2|| c2 == d2 || c2<1 || c2>4 || isNaN(c2)){
+                             c2 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO C2:\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                             if( c2 == "cancelar" || c2 == "CANCELAR" || c2 == "Cancelar" ){ 
+                               var canw = "s"
+                               c2 = 2;  
+                             }
+                        }  
+                        //Caso o jogador acerte o número
+                        if( c2 != c1 && c2 != c3 && c2 != c4 && c2 != a2 && c2 != b2 && c2 != d2 && 1<= c2 <=4 && c2!=(isNaN(c2)) && canw != "s" ){
+                          quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                        }
+                      }
+                      if( c2 == "cancelar" || c2 == "CANCELAR" || c2 == "Cancelar" || canw == "s" ){ 
+                        c2 = " ";  
+                        quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                      }
+                   }canw = "n"
+
+
+                   //C3
+                   //Caso o jogador decida colocar um número na posição C3
+                   if( posicao == "C3" || posicao == "c3" || posicao == "3C" || posicao == "3c" ){
+                      c3 = prompt( "QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO C3?\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                      if( c3 != "cancelar" && c3 != "CANCELAR" && c3 != "Cancelar" ){
+                        //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                        while( c3 == c1 || c3 == c2 || c3 == c4 || c3 == a3 || c3 == b3|| c3 == d3 || c3<1 || c3>4 || isNaN(c3)){
+                             c3 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO C3:\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                             if( c3 == "cancelar" || c3 == "CANCELAR" || c3 == "Cancelar" ){ 
+                               var canw = "s"
+                               c3 = 1;  
+                             }
+                        }  
+                        //Caso o jogador acerte o número
+                        if( c3 != c1 && c3 != c2 && c3 != c4 && c3 != a3 && c3 != b3 && c3 != d3 && 1<= c3 <=4 && c3!=(isNaN(c3)) && canw != "s" ){
+                          quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                        }
+                      }
+                      if( c3 == "cancelar" || c3 == "CANCELAR" || c3 == "Cancelar" || canw == "s" ){ 
+                        c3 = " ";  
+                        quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                      }
+                   }canw = "n"
+     
+                   //C4
+                   //Caso o jogador decida colocar um número na posição C4
+                   if( posicao == "C4" || posicao == "c4" || posicao == "4C" || posicao == "4c" ){
+                     c4 = prompt( " QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO  C4?\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                     if( c4 != "cancelar" && c4 != "CANCELAR" && c4 != "Cancelar" ){
+                       //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                       while( c4 == c1 || c4 == c2 || c4 == c3 || c4 == a4 || c4 == b4|| c4 == d4 || c4<1 || c4>4 || isNaN(c4)){
+                            c4 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO C4:\n"+quadro+"\n*Podes digitar a palavra > cancelar, para mudar a posição desejada.");
+                            if( c4 == "cancelar" || c4 == "CANCELAR" || c4 == "Cancelar" ){ 
+                              var canw = "s"
+                              c4 = 3;  
+                            }
+                       }
+                       //Caso o jogador acerte o número
+                       if( c4 != c1 && c4 != c2 && c4 != c3 && c4 != a4 && c4 != b4 && c4 != d4 && 1<= c4 <=4 && c4!=(isNaN(c4)) && canw != "s" ){
+                         quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                       }
+                     }
+                     if( c4 == "cancelar" || c4 == "CANCELAR" || c4 == "Cancelar" || canw == "s" ){ 
+                       c4 = " ";  
+                       quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                     }
+                   }canw = "n"
+     
+                   //D1
+                   //Caso o jogador decida colocar um número na posição D1
+                   if( posicao ==  "D1" || posicao ==  "d1" || posicao == "1D" || posicao == "1d" ){
+                     d1 = prompt( "QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO d1?\n"+quadro);
+                     if( d1 != "cancelar" && d1 != "CANCELAR" && d1 != "Cancelar" ){
+                       //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                       while( d1 == d2 || d1 == d3 || d1 == d4 || d1 == a1 || d1 == b1 || d1 == c1 || d1<1 || d1>4 || isNaN (d1)){
+                            d1 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO D1:\n"+quadro);
+                            if( d1 == "cancelar" || d1 == "CANCELAR" || d1 == "Cancelar" ){ 
+                              var canw = "s"
+                              d1 = 1;  
+                            }
+                       }
+                       //Caso o jogador acerte o número
+                       if( d1 != d2 && d1 != d3 && d1 != d4 && d1 != a1 && d1 != b1 && d1 != c1 && 1<= d1 <=4 && d1!=(isNaN (d1)) && canw != "s" ){
+                         quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                       }
+                     }
+                     if( d1 == "cancelar" || d1 == "CANCELAR" || d1 == "Cancelar" || canw == "s" ){ 
+                       d1 = " ";  
+                       quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                     }
+                   }canw = "n"     
+
+                   //D3
+                   //Caso o jogador decida colocar um número na posição D3
+                   if( posicao ==  "D3" || posicao ==  "d3" || posicao == "3D" || posicao == "3d" ){
+                     d3 = prompt( "QUAL É O NÚMERO QUE TU DESEJAS COLOCAR NA POSIÇÃO D3?\n"+quadro);
+                     if( d3 != "cancelar" && d3 != "CANCELAR" && d3 != "Cancelar" ){
+                       //Caso o jogador bote um número igual a outro da mesma linha ou que seja maior que 4 e menor que 1 e NaN             
+                       while( d3 == d1 || d3 == d2 || d3 == d4 || d3 == a3 || d3 == b3 || d3 == c3 || d3<1 || d3>4 || isNaN (d3)){
+                            d3 = prompt( "DIGITE NOVAMENTE UM NÚMERO PARA A POSIÇÃO D3:\n"+quadro);
+                            if( d3 == "cancelar" || d3 == "CANCELAR" || d3 == "Cancelar" ){ 
+                              var canw = "s"
+                              d3 = 4;  
+                            }
+                       } 
+                       //Caso o jogador acerte o número
+                       if( d3 != d1 && d3 != d2 && d3 != d4 && d3 != a3 && d3 != b3 && d3 != c3 && 1<= d3 <=4 && d3!=(isNaN (d3)) && canw != "s" ){
+                         quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |";
+                       }
+                     }
+                     if( d3 == "cancelar" || d3 == "CANCELAR" || d3 == "Cancelar" ){ 
+                       d3 = " ";  
+                       quadro = "__| A | B | C | D |\n1-| "+a1+" | "+b1+" | "+c1+" | "+d1+" |\n2-| "+a2+" | "+b2+" | "+c2+" | "+d2+" |\n3-| "+a3+" | "+b3+" | "+c3+" | "+d3+" |\n4-| "+a4+" | "+b4+" | "+c4+" | "+d4+" |"; 
+                    }
+                   }canw = "n"
+
+        //    
+              }
+              if( sair != "s" ){
+                alert("            PARABÉNS!\n   Você completou a fase 3!");
+              }
+         }
+       }sair="n" 

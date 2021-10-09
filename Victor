@@ -1,0 +1,84 @@
+//Ex.1
+var n=parseInt(prompt("Indique um número: "));
+var c=n;
+while(c*c>n){
+(c--);
+}
+alert(c);
+
+//Ex.2
+
+var nome,preco,desejo,contas,numcontas;
+nome=prompt("Qual o nome da conta?");
+preco=parseInt(prompt("Qual o preço desta conta?"));
+desejo="S";
+numcontas=0;
+contas=0;
+while( desejo=="S" ){
+contas=contas+preco;
+numcontas+=1;
+desejo=prompt("Deseja informar uma nova conta?\nResponda S (Para sim) ou N (Para não).");
+if(desejo=="S"){
+nome=prompt("Qual o nome da conta?");
+preco=parseInt(prompt("Qual o preço desta conta?"));
+}
+}
+alert("O número de contas é de: "+numcontas+". Já o total a ser pago é de: R$"+contas+".");
+
+
+//Ex.3
+var num1=parseInt(prompt("Indique um número: "));
+var num2=parseInt(prompt("Indique outro número: "));
+var numeros=1;
+var mmc1=num1;
+var mmc2=num2;
+while(num1%2==0 && num2%2==0){
+num1=num1/2;
+num2=num2/2;
+numeros=numeros*2;
+}
+while(num1%3==0 && num2%3==0){
+num1=num1/3;
+num2=num2/3;
+numeros=numeros*3;
+}
+while(num1%5==0 && num2%5==0){
+num1=num1/5;
+num2=num2/5;
+numeros=numeros*5;
+}
+alert(numeros);
+
+
+
+
+
+//Como resolver o 3
+
+var p,y,x,n1,n2,mmc;
+p=0;
+y=2;
+x=2;
+mmc=1;
+n1=parseInt(prompt(""));
+n2=parseInt(prompt(""));
+while( n1!=1 || n2!=1 ){
+  if(n1%x==0 || n2%x==0){
+    mmc*=x;
+    if(n1%x==0)
+    n1/=x
+    if(n2%x==0)
+    n2/=x;
+  }else{
+    x++;
+    while(y<x){
+      if(x%y===0)
+      p++;
+      y++;
+      if(p!==0){
+        x++;
+        y=0;
+      }
+    }
+  }
+}alert(mmc);

@@ -1,0 +1,69 @@
+var r,valor;
+valor=parseInt(prompt("Indique o valor sacado: "));
+//Caso seja em moedas
+if( valor<2 ){
+  alert("O saque deverá ser feito em moedas.");
+}
+//Caso dê certo em notas de R$2
+if( 5>valor>==2 && valor%2===0 ){
+  r=valor/2;
+  alert("O saque deverá ser feito com: "+r+" notas de R$2.");
+}
+//Caso não dê certo em notas de R$2
+  if( 5>valor>==2 && valor%2!==0 ){
+    r=((valor/2).toFixed(0));
+    rf=valor-((valor/2).toFixed(0));
+    alert("O saque deverá ser feito com: "+r+" notas de R$2 e R$"+rf+" em moedas.");
+  }
+//Caso dê certo em notas de R$5
+if( 10>valor>==5 && valor%5===0 ){
+  r=valor/5;
+  alert("O saque deverá ser feito com: "+r+" notas de R$5.");
+}
+//Caso não dê certo em notas de R$5 no caso de usar notas de R$2
+  if( 10>valor>==5 && valor%5!==0 ){
+    r=((valor/5).toFixed(0));
+    rf=(valor-((valor/2).toFixed(0)))/2;
+    alert("O saque deverá ser feito com: "+r+" notas de R$2 e R$"+rf+" em notas de R$2.");
+  }
+//Caso dê certo em notas de R$10
+if( 20>valor>==10 && valor%10===0 ){
+r=valor/10;
+alert("O saque deverá ser feito com: "+r+" notas de R$10.");
+}
+//Caso dê certo em notas de R$20
+if( 50>valor>==20 && valor%20===0 ){
+r=valor/20;
+alert("O saque deverá ser feito com: "+r+" notas de R$20.");
+}
+//Caso dê certo em notas de R$50
+if( 100>valor>==50 && valor%50===0 ){
+r=valor/50;
+alert("O saque deverá ser feito com: "+r+" notas de R$50.");
+}
+//Caso dê certo em notas de R$100
+if( valor>==100 && valor%100===0 ){
+r=valor/100;
+alert("O saque deverá ser feito com: "+r+" notas de R$2.");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

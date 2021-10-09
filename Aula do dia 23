@@ -1,0 +1,80 @@
+Desenvolver um proggrama para dizer se um aluno foi aprovado
+
+var n1,n2,n3,n4,fr;
+n1=parseInt(prompt("Insira o valor da nota 1: "));
+n2=parseInt(prompt("Insira o valor da nota 2: "));
+n3=parseInt(prompt("Insira o valor da nota 3: "));
+n4=parseInt(prompt("Insira o valor da nota 4: "));
+fr=parseInt(prompt("Insira a frequência do aluno: "));
+m=(n1+n2+n3+n4)/4;
+if (m>==7 && fr>==75){
+alert (" O aluno foi aprovado!");
+}else{
+alert ("O aluno foi reprovado!");
+}
+
+//Verificar se um número está dentro do intervalo
+//Pede o início e o fim desse intervalo e identifica se ele está dentro do intervalo
+
+
+comeco=parseInt(prompt("Informe o começo do intervalo: "));
+fim=parseInt(prompt("Informe o fim do intervalo: "));
+des=parseInt(prompt("Informe o número desejado: "));
+if(comeco<=des>=fim){
+alert("O número está no intervalo")
+}else
+alert("O número não está no intervalo")
+}
+
+//Agora faça o contrário
+
+comeco=parseInt(prompt("Informe o começo do intervalo: "));
+fim=parseInt(prompt("Informe o fim do intervalo: "));
+des=parseInt(prompt("Informe o número desejado: "));
+if(des<comeco || des>fim){
+alert("O número está fora do intervalo")
+}else
+alert("O número está no intervalo")
+}
+
+//
+
+var eq,op,vl1,vl2;
+op=prompt("Insira o sinal da operação: ");
+vl1=parseInt(prompt("Insira o valor da variável 1: "));
+vl2=parseInt(prompt("Insira o valor da variável 2: "));
+if(op==="+"){
+eq=(vl1+vl2);
+alert ("O resultado da equação é "+eq+".");
+}
+if(op==="-"){
+eq=(vl1-vl2);
+alert ("O valor da equação é "+eq+".");
+}
+if(op==="*"){
+eq=(vl1*vl2);
+alert ("O valor da equação é "+eq+".");
+}
+if(op==="/"){
+eq=(vl1/vl2);
+alert ("O valor da equação é "+eq+".");
+}
+
+//Leia o nome de 2 times e o número de vitérias(3p), empates(1p) e derrotas(0p) que estes times tiveram no campeonato. QUEM TEVE MAIS PONTOS.Mo stre na tela quem e quantos pontos o time ganhador teve.
+
+var v1,v2,e1,e2,d1,d2,ganhador,pontuacao;
+v1=parseInt(prompt("Informe o número de viórias do time 1: "));
+v2=parseInt(prompt("Informe o número de viórias do time 2: "));
+e1=parseInt(prompt("Informe o numero de empates do time 1: "));
+e2=parseInt(prompt("Informe o numero de empates do time 2: "));
+d1=parseInt(prompt("Informe o numero de derrotas do time 1: "));
+d2=parseInt(prompt("Informe o numero de derrotas do time 2: "));
+tp1=((v1*3)+e1);
+tp2=((v2*3)+e1);
+if(tp1>tp2)
+alert("O time 1 teve mais pontos. Ele ficou com uma pontuação de "+tp1+" pontos.");
+if(tp2>tp1)
+alert("O time 2 teve mais pontos. Ele ficou com uma pontuação de "+tp2+" pontos.");
+if(tp2==tp1)
+alert("O time 1 e o time 2 tiveram o mesmo número de pontos. Eles ficaram cada um com uma pontuação de "+tp2+" pontos.");
+

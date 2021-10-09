@@ -1,0 +1,33 @@
+//Teste
+
+//1
+
+var nmin,npes,ntpa;
+npes=parseFloat(prompt("Indique o número de pessoas que estão na fila: "));//não era necessário
+nmin=parseFloat(prompt("Indique o tempo em minutos: "));
+ntpa=4*nmin;
+alert (" O numero de pessoas atendidas em "+nmin+" é de "+ntpa+" pessoas.");
+
+//Funciona carai
+
+//2
+
+var am,nm,sem;
+nm=parseFloat(prompt("Informe o número da matrícula: "));
+am=(nm/100000).toFixed(0);
+sem=Math.abs(((nm/10000).toFixed(0))-((10*(nm/100000)).toFixed(0)));
+alert ("O ano da matrícula foi "+am+" e o semestre da matrícula foi "+sem+".");
+
+//3
+
+var pp,n,p;
+n=parseFloat(prompt("Insira o numero: "));
+p=parseFloat(prompt("Insira a posição desejada: "));
+pp=((n/(10**(Math.abs(p-1)))).toFixed(0))-((10*((n/(10**p)))).toFixed(0));
+alert (pp);
+
+//tarefa
+
+
+
+

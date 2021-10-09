@@ -1,0 +1,275 @@
+
+
+
+
+//                                                  Vetores
+
+
+
+
+//Vem dentro de colchetes, tu podes trabalhar com ele como se forre uma string, porém ele é beeem mais útil na hora de pegar valores dentro do mesmo;
+
+//EXEMPLOS
+
+var vetor = [];
+vetor[0] = "pipoca"; 
+vetor[1] = 1 + 1;
+vetor[2] = 3.1415;
+vetor[3] = prompt("Digite o quarto elemento : ");
+alert(vetor);
+vetor [1] = 22;
+alert(vetor);
+
+//Um programa que lê dez números e soma o primeiro com o último :
+
+var vetor = [];
+var c = 0;
+for(; c <= 9 ; c++){
+   vetor[c] = parseInt(prompt("Digite O elemento : "));
+}
+var soma = vetor[0] + vetor[9];
+alert(soma);
+
+//Agora o usuário diz o número de elementos
+
+var vetor = [];
+var c = 0;
+var n = parseInt(prompt("Digite o número de números desejado :"));
+for(; c <= (n-1) ; c++){
+   vetor[c] = parseInt(prompt("Digite o elemento :"));
+}
+var soma = vetor[0] + vetor[(n-1)];
+alert(soma);
+
+//A prefeitura da cidade A realizou um concurso para a seleção de técnicos de informática. O concurso consistiu em uma prova contendo 10 questões objetivas com cinco alternativas cada, a,b,c,d ou e. Ao todo dez candidatos fizeram as provas. Faça um programa que leia uma matriz dez por dez contendo as respostas de todos os candiadatos. Cada l\m1inha da matriz Conterá as respostas de um candidato a cada uma das questões. O programa tambem deve ler umm vetor de dez posições contendo o gabarito da prova. Ao final deverá mostrar o total de pontos por cada candidato. Faça um vetor do nome dos candidatos.
+
+//Faça para 3
+
+var c = 0; 
+var pos = 1;
+var nomes = [];
+for( pos = 1, c = 0 ; c<3 ; pos++, c++ ){ 
+   nomes[c] = prompt("Diga o nome do candidato "+pos+" pls...");
+}
+var gabarito = [];
+for( pos = 1, c = 0 ; c<3 ; pos++, c++ ){ 
+   gabarito[c] = prompt("Diga o gabarito da questão "+pos+" pls...");
+}
+var PROVA = [ [], [], [] ];
+var c1 = 0;
+for( c = 0, c1 = 0 ; c<3 ; c++ ){ 
+   for( c1 = 0, pos = 1; c1<3 ; pos++, c1++ ){
+      PROVA[c][c1] = prompt("Diga a resposta da questão "+pos+" do candidato "+nomes[c]+" :");      
+   }
+}
+var pontos = [ 0, 0, 0 ];
+
+for( c = 0, c1 = 0 ; c<3 ; c++ ){ 
+   for( c1 = 0, pos = 1; c1<3 ; pos++, c1++ ){
+      if( PROVA[c][c1] == gabarito[c] ){
+        pontos[c]++; 
+      }                                        
+   }
+}
+
+for( c = 0 ; c < 3 ; c++ ){
+   alert("O candidato "+nomes[c]+" teve a pontuação de "+pontos[c]);
+}
+
+//QTD de acertos por questões
+
+var questoes = [ [], [], [] ];
+for( c = 0, c1 = 0 ; c<3 ; c++ ){ 
+   for( c1 = 0, pos = 1; c1<3 ; pos++, c1++ ){
+      if( PROVA[c][c1] == gabarito[c] ){
+        questoes[c]++; 
+      }                                        
+   }
+}
+alert("Os acertos das questões foram os seguintes : [ "+questoes+" ] .")
+
+//A média de acertos dos candidatos
+
+var media = [];
+for( c = 0, c1 = 0; c < 3; c++, c1++ ){
+   media[c] = pontos[c]/3
+}
+alert("A média de acerto foi de "+media+" para o primeiro, segundo e terceiro candiadato.")
+
+//Quais candidatos ganharam as duas vagas
+
+var melhor = 0;
+var segmelhor = 0;
+for( c = 0 ; c < 3 ;c++ ){
+   if( pontos[c] >= melhor ){ 
+     melhor = pontos[c];
+     c1 = c;
+   }
+}
+var c2 = 0;
+for( c = 0 ; c < 3 ;c++ ){
+   if( c == c1 ){ 
+     c++;
+   }
+   if( pontos[c] >= segmelhor ){ 
+     segmelhor = pontos[c];
+     c2 = c;
+   }
+}
+alert("O dois vencedores da vaga foram: "+nomes[c1]+" com "+melhor+" pontos e o segundo melhor foi "+nomes[c2]+" com "+segmelhor+".");
+
+//                                       FUNÇÕES DE VETORES
+
+//    LENGTH
+
+//Retorna o tamanho do vetor
+
+var v = [];
+alert(v.length); //0
+alert(v[1]);  //undefined
+
+var v = ["i","oi"];
+alert(v.length); //2
+alert(v[1]); //oi
+
+//    CONCAT
+
+//Une dois vetores
+
+var v1 = [ "a", "b", "c" ];
+var v2 = [ 1, 2, 3 ];
+var v3 = v1.concat(v2);
+alert(v1.concat(v2)); //[ "a", "b", "c", 1, 2, 3 ]
+alert(v1); //[ "a", "b", "c" ]
+alert(v2); //[ 1, 2, 3 ]
+
+//    FILL
+
+//Preenche o vetor com o valor colocado nos parênteses, e ao colocar uma vírgula, o número que vem depois diz apartir de onde tu começas a preencher o vetor
+
+alert(v2.fill(4)); //[ 4, 4, 4 ]
+alert([ 1, 2, 3 ].fill(4,1)); //[ 1, 4, 4 ]
+alert([ 1, 2, 3 ].fill(4,1,2)); //[1, 4, 3]
+alert([ 1, 2, 3 ].fill(4,1,3)); //[1, 4, 4]
+
+var v2 = [1,2,3,4,5];
+alert(v2.fill(4,2));//1,2,4,4,4
+
+//    INDEXOF E LAST INDEXOF
+
+//Te dá a primeira localização de um número (indexOf), e a última (lastIndexOf)
+
+var v = [ 2, 9, 15, 9, 23 ];
+alert(v.indexOf(1)); //-1
+alert(v.indexOf(9)); //1
+alert(v.indexOf(9,2)); //3
+var v = [ 2, 5, 9, 2 ];
+alert(v.lastIndexOf(2)); //3
+alert(v.lastIndexOf(7)); //-1
+
+//    PUSH E POP
+
+// Push coloca um valor na última posição
+// Pop tira o valor da última posição
+
+var v = [ 1, 2 ];
+alert(v.push(9));
+alert(v); //[1, 2, 9]
+alert(v.pop()); //9
+alert(v); //[1, 2]
+
+//  SHIFT E UNSHIFT
+
+//SHIFT tira o primeiro elemento
+//UNSHIFT coloca valores no começo do vetor 
+
+var v = [ 1, 2 ];
+alert(v.unshift(9)); //3
+alert(v); //[9, 1, 2]
+alert(v.shift()); //9
+alert(v); //[1, 2]
+
+//  REVERSE
+
+//Inverte o vetor
+
+var v = [ 1, 2, 3 ];
+v.reverse();
+alert(v); //[3, 2, 1]
+
+//  SLICE
+
+//Corta as paradas
+
+var V1 = [ 'Banana', 'Laranja', 'Limão', 'Maçã', 'Manga' ];
+var V2 = V1.slice(3);
+var V3 = V1.slice(1,3);
+alert(V1); //[“Banana”,”Laranja”,”Limão”,“Maçã”,”Manga”]
+alert(V2); //[“Maçã”,”Manga”]
+alert(V3); //[”Laranja”,”Limão”]
+
+//  SORT
+
+//Ordena o vetor em ordem crescente, somente os cardinais
+
+var v1 = [ 1, 10, 21, 2 ];
+v.sort();
+alert(v); //[ 1, 10, 2, 21 ] COMO EM  [ "1", "10", "2", "21" ]
+
+var v = [1,3,2];
+v.sort();
+alert(v); //[1,2,3]
+
+//  JOIN
+
+//Transforma o vetor em uma string
+
+var v1 = [ 1, 2, 3, 4, 5 ];
+alert(v.join("\n"); // "1/2/3/4/5”
+
+//  SPLIT
+
+//É UM DEUS
+//Pega as palavras de uma string
+
+var s = "teste de split";
+var r1 = s.split(" "); // ['teste', 'de', 'split']
+var r2 = s.split(); // ['teste de split']
+alert(r1);
+alert(r2);
+
+//
+
+alert("fim de vetores".split("").reverse().join(""));
+
+//serotev ed mif
+
+/////////////////////////////////////////////////////////////
+
+
+
+                                     //  EXERCÍCIO  //
+
+//Programa para um consultório odontológico
+//                         -controlar lista de atendimentos 
+//em atnd: júlia
+//1 - jean
+//2 - bruna
+//3 - silvio
+//4 - victor
+
+//1 adicionar
+//2 urgência
+//3 atender
+//4 excluir
+
+
+
+
+
+
+
+
+
+
+

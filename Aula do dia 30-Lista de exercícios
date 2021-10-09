@@ -1,0 +1,297 @@
+//(1)Leia dois valores numéricos inteiros e apresente o resultado da diferença do maior valor pelo menor valor.
+var a,b,r;
+a=parseInt(prompt("Indique o valor da variável A: "));
+b=parseInt(prompt("Indique o valor da variável B: "));
+if(a>=b){
+r=(a-b)
+alert(r)
+}
+if(b>=a){
+r=(b-a)
+alert(r)
+}
+//Certinho hehe
+
+//(2) Leia um valor numérico inteiro. O programa deve apresentar a mensagem “O valor está na faixa permitida”, caso o valor informado esteja entre 1 e 9. Se o valor estiver fora da faixa, o algoritmo/programa deve apresentar a mensagem “O valor está fora da faixa permitida”
+var x;
+x=parseInt(prompt("Insira o valor de x: "));
+if(1<=x&&x<=9)
+alert("O valor está na faixa")
+else{
+alert("O valor está fora da lista")
+}
+//Certinho
+
+//(3)Leia um número de 0 a 10 (testar se o número está nesta faixa) e escrevê-lo por extenso.
+var x;
+x=parseInt(prompt("Indique o valor de x: "))
+if(0<=x && x<=10)
+alert("O número está na faixa!")
+else{alert("O número não está na faixa.")}
+if(x===0){
+  alert("Zero")
+  
+}
+if(x==1){
+  alert("Um")
+  
+}
+if(x==2){
+  alert("Dois")
+  
+}
+if(x==3){
+  alert("Três")
+  
+}
+if(x==4){
+  alert("Quatro")
+  
+}
+if(x==5){
+  alert("Cinco")
+  
+}
+if(x==6){
+  alert("Seis")
+  
+}
+if(x==7){
+  alert("Sete")
+  
+}
+if(x==8){
+  alert("Oito")
+  
+}
+if(x==9){
+  alert("Nove")
+  
+}
+if(x==10){
+  alert("Dez")
+  
+}
+
+//(4)Leia a idade de uma pessoa e informe a sua classe eleitoral: não eleitor (abaixo de 16 anos);  eleitor obrigatório (entre a faixa de 18 e menor de 65 anos);  eleitor facultativo (de 16 até 18 anos e maior de 65 anos, inclusive).
+var x;
+x=parseInt(prompt("Indique a sua idade: "));
+if(x<16){
+alert("Não eleitor")
+}else{if(65>x>18)
+alert("Eleitor obrigatório")
+}
+else(16<=x<=18&&x>=65)
+alert("Eleitor facultativo")
+
+//(5) Leia quatro valores numéricos inteiros e mostre os valores que são divisíveis por 2 e 3.
+var vl1,vl2,vl3,vl4;
+vl1=parseInt(prompt("Indique o valor 1: "));
+vl2=parseInt(prompt("Indique o valor 2: "));
+vl3=parseInt(prompt("Indique o valor 3: "));
+vl4=parseInt(prompt("Indique o valor 4: "));
+//Cálculos sobre o valor 1
+if(vl1%2===0&&vl1%3===0)
+alert("O valor 1 é divisível por 2 e 3.");
+if(vl1%2!==0&&vl1%3===0)
+alert("O valor 1 não é divisível por 2, porém é divisível por 3.");
+if(vl1%2===0 && vl1%3!==0)
+alert("O valor 1 é divisível por 2, porém é indivisível por 3.");
+if(vl1%2!==0&&vl1%3!==0){
+alert("O valor 1 não é divisível por 2 nem por 3.");
+}
+//Cálculos sobre o valor 2
+if(vl2%2===0 && vl2%3===0)
+alert("O valor 2 é divisível por 2 e 3.");
+if(vl2%2!==0 && vl2%3===0)
+alert("O valor 2 não é divisível por 2, porém é divisível por 3.");
+if(vl2%2===0 && vl2%3!==0)
+alert("O valor 2 é divisível por 2, porém é indivisível por 3");
+if(vl2%2!==0 && vl2%3!==0){
+alert("O valor 2 é indivisível por 2 é 3.");
+}
+//Cálculos sobre o valor 3
+if(vl3%2===0 && vl3%3===0)
+alert("O valor 3 é divisível por 2 e 3.");
+if(vl3%2!==0 && vl3%3===0)
+alert("O valor 3 não é divisível por 2, porém é divisível por 3.");
+if(vl3%2===0 && vl3%3!==0)
+alert("O valor 3 é divisível por 2, porém é indivisível por 3");
+if(vl3%2!==0 && vl3%3!==0){
+alert("O valor 3 é indivisível por 2 é 3.");
+}
+//Cálculos sobre o valor 4
+if(vl4%2===0 && vl4%3===0)
+alert("O valor 4 é divisível por 2 e 3.");
+if(vl4%2!==0 && vl4%3===0)
+alert("O valor 4 não é divisível por 2, porém é divisível por 3.");
+if(vl4%2===0 && vl4%3!==0)
+alert("O valor 4 é divisível por 2, porém é indivisível por 3");
+if(vl4%2!==0 && vl4%3!==0){
+alert("O valor 4 é indivisível por 2 é 3.");
+}
+//(6) Leia um número e, se ele for positivo, mostre na tela a metade desse número, caso contrário mostre o número ao quadrado
+var x,r;
+x=parseInt(prompt("Valor de x: "));
+if(Math.sqrt(x)){
+r=(x/2);
+alert(r);
+}
+else{
+r=Math.pow(x,2);
+alert(r);
+}
+//(7)Leia cinco valores numéricos inteiros, identifique e apresente o maior e o menor valor informado
+var vl1,vl2,vl3,vl4,vl5;
+vl1=parseInt(prompt("Indique o valor 1: "));
+vl2=parseInt(prompt("Indique o valor 2: "));
+vl3=parseInt(prompt("Indique o valor 3: "));
+vl4=parseInt(prompt("Indique o valor 4: "));
+vl5=parseInt(prompt("Indique o valor 5: "));
+//cálculo 1
+if(vl1>vl2 && vl1>vl3 && vl1>vl4 && vl1>vl5){
+alert("O valor 1 é maior do que todos os outros valores.");
+}
+if(vl2>vl1 && vl2>vl3 && vl2>vl4 && vl2>vl5){
+alert("O valor 2 é maior do que todos os outros valores.");
+}
+if(vl3>vl1 && vl1>vl2 && vl3>vl4 && vl3>vl5){
+alert("O valor 3 é maior do que todos os outros valores.");
+}
+if(vl4>vl1 && vl4>vl2 && vl4>vl3 && vl4>vl5){
+alert("O valor 4 é maior do que todos os outros valores.");
+}
+if(vl5>vl1 && vl5>vl2 && vl5>vl3 && vl5>vl4){
+alert("O valor 5 é maior do que todos os outros valores.");
+}
+//Cálculo 2
+if(vl1<vl2 && vl1<vl3 && vl1<vl4 && vl1<vl5){
+alert("O valor 1 é menor que todos os outros valores.");
+}
+if(vl2<vl1 && vl2<vl3 && vl2<vl4 && vl2<vl5){
+alert("O valor 2 é menordo que todos os outros valores.");
+}
+if(vl3<vl1 && vl1<vl2 && vl3<vl4 && vl3<vl5){
+alert("O valor 3 é menor do que todos os outros valores.");
+}
+if(vl4<vl1 && vl4<vl2 && vl4<vl3 && vl4<vl5){
+alert("O valor 4 é menor do que todos os outros valores.");
+}
+if(vl5<vl1 && vl5<vl2 && vl5<vl3 && vl5<vl4){
+alert("O valor 5 é menor que todos os outros valores.")
+}
+//(8) Leia um valor numérico inteiro qualquer e fazer a sua apresentação caso o valor não seja maior que 3. Utilize apenas o operador lógico de negação para a solução deste problema.
+var v;
+v=parseInt(prompt("Indique o valor: ");
+if(!(v>3))
+alert(v)
+else
+alert("_")
+
+//(9) Leia um número inteiro e indique se ele representa um ano bissexto (Um ano bissexto é um inteiro maior do que 1584 que seja divisível por 400, ou seja divisível por 4 e não por 100).
+var ano;
+ano=parseInt(prompt("Indique o número inteiro desejado: "));
+if(ano>1584 && ano%400=== && ano%4==0 %% ano%100!==0)
+alert(ano)
+else
+alert("_")
+
+//(10) Receba o preço de um produto e seu código de origem e mostre o preço do produto junto de sua procedência, conforme tabela a seguir:
+//Código de Origem Região de Procedência
+//1 |Norte
+//2, 5, 9 |Sul
+//3, 10 até 15 |Leste
+//7 ou 20 |Oeste
+//Qualquer outro |Importado
+var cod;
+cod=parseInt(prompt("indique o código do produto: "));
+if(cod===1){
+alert("O código do produto é "+1+" e a sua região de origem é do Norte.")
+}
+if(cod===2 || cod===5 || cod===9){
+alert("O código do produto é "+cod+" e a sua região de origem é do Sul.")
+}
+if(cod===3 || 10<==cod>==15){
+alert("O código do produto é "+cod+" e a sua região de origem é o Leste.")
+}
+if(cod===7 || cod===20){
+alert("O código do produto é "+cod+" e a sua região de origem é o Oeste.")
+}
+if(cod!==1 && cod!==2 && cod!==5 && cod!==9 && cod!==3 && 10!<==cod!>==15 && cod!==7 && cod!==20){
+alert("O código do produto é"+cod+" e ele foi importado doutro país.")
+}
+
+//(11)Leia um número e mostre uma das mensagens: é múltiplo de 3, ou, não é múltiplo de 3.
+var num;
+num=parseInt(prompt("Indique o número:"));
+if(num%3===0){
+alert("O número é múltiplo de 3.");
+}
+else{alert("O número não é múltiplo de 3.");}
+
+//(12) Leia dois números e responda se a divisão do primeiro pelo segundo é exata. Se for, o programa deve imprimir a mensagem “A divisão de (1º numero) por (2º número) é exata”.
+var num1,num2;
+num1=parseInt(prompt("Indique o primeiro número: "));
+num2=parseInt(prompt("Indique o segundo número: "));
+if(num1%num2===0)
+alert("Imprima está mensagem: A divisão de "+num1+" por "+num2+" é exata.")
+
+//(13)Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor da compra for menor que R$ 20,00; caso contrário, o lucro será de 30%. Elabore um programa que leia o valor do produto e mostre o valor de venda para o produto.
+var preco,r;
+peco=parseInt(prompt("indique o preço do produto"));
+if(preco>==20){
+r=((preco*30)/100)+preco;
+alert("o valor para a venda do produto obtendo 30% de lucro é de: R$"+r+",00.")
+}
+if(preco<20){
+r=((preco*30)/100)+preco;
+alert("O preço para a venda deste produto obtendo 45% de lucro é de: R$"+r+",00.")
+}
+
+//(14) Uma empresa qualquer decidiu conceder um aumento de salários a seus funcionários de acordo com a tabela abaixo:
+//Salário Atual Aumento
+0 – 400,00 |15%
+400,01 – 700,00 |12%
+700,01 – 1.000,00 |10%
+1.000,01 – 1.800,00 |7%
+1.800,01 – 2.500,00 |5%
+Acima de 2.500,00 |Sem aumento
+//Escreva um programa que leia o salário atual de um funcionário e escreva o percentual de seu aumento e o valor do salário corrigido a partir desse aumento.
+
+var sal,r;
+sal=parseInt(prompt("Indique o valor do seu salário atual: "));
+if(0<==sal<==400.00){
+r=((sal*15)/100)+sal;
+alert("O seu aumento do salário é de 15%, e o seu salário final é de: R$"+r+".");
+}
+if(400.01<==sal<==700.00){
+r=((sal*12)/100)+sal;
+alert("O seu aumento do salário é de 12%, e o seu salário final é de: R$"+r+".");
+}
+if(700.01<==sal<==1000.00){
+r=((sal*10)/100)+sal;
+alert("O seu aumento do salário é de 10%, e o seu salário final é de: R$"+r+".");
+}
+if(1000.01<==sal<==1800.00){
+r=((sal*7)/100)+sal;
+alert("O seu aumento do salário é de 7%, e o seu salário final é de: R$"+r+".");
+}
+if(1800.01<==sal<==2500.00){
+r=((sal*5)/100)+sal;
+alert("O seu aumento do salário é de 5%, e o seu salário final é de: R$"+r+".");
+}
+if(2500.00<sal){
+alert("O seu salário não sofreu um aumento por ser maior que R$2500,00. Então o seu salário final é de: R$"+sal+".");
+}
+//(15)A prefeitura de Contagem abriu uma linha de crédito para os funcionários estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário bruto. Fazer um programa que permita entrar com o salário bruto e o valor da prestação, e informar se o empréstimo pode ou não ser concedido. 
+var prest,salb,r;
+prest=parseInt(prompt("Informe o valor da prestação: "));
+salb=parseInt(prompt("Informe o valor od seu salário bruto: "));
+r=(salb*30)/100;
+if(prest<r){
+alert("O empréstimo será concedido.");
+}
+else
+alert("O empréstimo não será concedido.");
+
+

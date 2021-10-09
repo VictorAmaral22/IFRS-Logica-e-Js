@@ -1,0 +1,213 @@
+--Comandos desnecessauros--
+
+c=0
+c++
+c--
+alert (c)
+
+s=0
+n=1
+s=n
+alert(s)//s=1
+
+s=0
+n=1
+s+=n
+alert(s) //s=1
+
+s=0
+n=1
+s-=n
+alert(s)//s=-1
+
+s=0
+n=1
+s*=n
+alert(s)//s=0
+
+s=0
+n=1
+s/=n
+alert(s)//s=0
+
+s=0
+n=1
+s%=n
+alert(s)//s=0
+
+
+--//Comando SWITCH
+
+var dia;
+var n = parseInt(prompt ("Digite um númeri de 0 a 6: ") );
+switch (n) {
+       case 0:
+              dia = "Domingo";
+              break;
+       case 1:
+              dia = "Segunda-feira";
+              break;
+       case 2:
+              dia = "Terça-feira";
+              break;
+       case 3:
+              dia = "Quarta-feira";
+              break;
+       case 4:
+              dia = "Quinta-feira";
+              break;
+       case 5:
+              dia = "Sexta-feira";
+              break;
+       case 6:
+              dia = "Sábado";
+              break;
+       default:
+              dia = "Número inválido";
+}alert(dia);  
+
+
+//Ao tirar o "parseInt", o número dá inválido
+
+var dia;
+var n = parseInt(prompt ("Digite um númeri de 0 a 6: ") );
+switch (n) {
+       case  1:
+       case  2:
+       case  3:
+       default:
+               text  = "Não é fim de semana!";
+               break;
+       case  4:
+       case  5:
+               text  = "Perto do fim de semana";
+               break;
+       case 0:
+       case 6:
+               text  = "É fim de semana";
+               break;
+}alert(text);  
+
+// Calculador a utilizando o switch
+
+var op,n1,n2;
+var op = (prompt ("Digite a operação: ") );
+var n1 = parseInt(prompt ("Digite o valor do número 1: ") );
+var n2 = parseInt(prompt ("Digite o valor do número 2: ") );
+switch (op) {
+       case  "+":
+           n1 +=n2;
+           break; 
+       case  "-":
+           n1 -=n2;
+           break;
+       case  "*":
+           n1 *=n2;
+           break;
+       case  "/":
+           n1 /=n2;
+           break;
+}alert(n1); 
+
+//Calculadora validando op e som. número positivos
+
+var op,n1,n2;
+op = (prompt ("Digite a operação: ") );
+while ( op!=="+" && op!=="-" && op!=="*" && op!=="/" ){
+  alert("Operação inválida. Digite novamente: ");
+  op = prompt("Digite a nova operação: ");
+}
+n1 = parseInt(prompt ("Digite o valor do número 1: ") );
+while(n1<0){
+  alert("Não aceitamos valores negativos. Digite novamente o valor do número 1: ");
+  n1 = parseInt(prompt ("Digite o valor do número 1: ") );
+}
+n2 = parseInt(prompt ("Digite o valor do número 2: ") );
+while(n2<0){
+  alert("Não aceitamos valores negativos. Digite novamente o valor do número 2: ");
+  n2 = parseInt(prompt ("Digite o valor do número 2: ") );
+} 
+switch (op) {
+       case  "+":
+           n1 +=n2;
+           break; 
+       case  "-":
+           n1 -=n2;
+           break;
+       case  "*":
+           n1 *=n2;
+           break;
+       case  "/":
+           n1 /=n2;
+           break;
+       default :
+           n1 = "Operação inválida";
+}alert(n1); 
+
+//Meses k
+
+var month,text;
+month = parseInt(prompt ("Digite o mês: ") );
+while ( month>12 || month<1 ){
+  alert("Mês inválido. Digite novamente: ");
+  month = parseInt(prompt("Digite novamente o mês: "));
+}
+switch (month) {
+       case  2:
+           text = "O mês tem 28 dias.";
+           break;
+       case  1:
+       case  3:
+       case  5:
+       case  7:
+       case  8:
+       case  10:
+       case  12:
+           text = "O mês tem 31 dias.";
+           break;
+       case  4:
+       case  6:
+       case  9:
+       case  11:
+           text = "O mês tem 30 dias.";
+           break;
+}alert(text);
+
+//Idade
+
+var categoria;
+categoria=0
+var idade = parseInt(prompt("Digite a idade: "));
+categoria= idade>=18?"Adulto":"Juvenil";
+alert(categoria);
+
+//Ano bissexto
+
+var month,text;
+month = parseInt(prompt ("Digite o mês: ") );
+while ( month>12 || month<1 ){
+  alert("Mês inválido. Digite novamente: ");
+  month = parseInt(prompt("Digite novamente o mês: "));
+}
+var ano = parseInt(prompt("Digite o ano: "));
+switch (month) {
+       case  2:
+           text = ano%4==0?"O mês tem 29 dias.":"O mês tem 28 dias.";
+           break;
+       case  1:
+       case  3:
+       case  5:
+       case  7:
+       case  8:
+       case  10:
+       case  12:
+           text = "O mês tem 31 dias.";
+           break;
+       case  4:
+       case  6:
+       case  9:
+       case  11:
+           text = "O mês tem 30 dias.";
+           break;
+}alert(text);
+

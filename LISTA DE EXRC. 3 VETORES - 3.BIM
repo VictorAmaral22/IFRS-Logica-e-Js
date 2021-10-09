@@ -1,0 +1,273 @@
+//1. Leia uma sequência de N números inteiros e mostre essa sequência ao contrário, no final de sua execução. O valor de N deve ser informado pelo usuário.
+
+var v = [];
+var c = 0;
+var n = parseInt(prompt("Digite o número de números desejado :"));
+c = n;
+for(; c >= 0 ; c--){
+   v[c] = parseInt(prompt("Digite o elemento :"));
+}
+alert(v);
+
+//2. Leia a pontuação de N times de um campeonato de futebol. O programa deve mostrar, ao final, qual a pontuação dos campeões, bem como mostrar quantos times dividiram o título.
+
+var v = [];
+var c = 0;
+var n = parseInt(prompt("Digite o número de times participantes :"));
+for(; c <= (n-1) ; c++){
+   v[c] = parseInt(prompt("Digite o elemento :"));
+}
+var c1 = 0;
+var maior = 0;
+var empate = 0;
+for(; c1 <= c ; c1++){
+   if( v[c1] >= maior ){
+     maior = v[c1]
+   }
+}
+c1 = 0;
+for(; c1 <= c ; c1++){
+   if( v[c1] == maior ){
+     empate += 1; 
+   }
+}
+alert("O número de participantes que dividiram o título é de: "+empate);
+alert("O campeão foi o time que teve a pontuação de : "+maior);
+alert("O número de times que disputaram o título são, ao total, "+n+".");
+
+//3. Peça ao usuário 10 números, calcule e mostre a média desses 10 números e mostre ainda quantos, desses números, são maiores que a média.
+
+var v = [];
+var c = 0;
+alert("Por favor, digite dez números.")
+for(; c <= 9 ; c++){
+   v[c] = parseInt(prompt("Digite um :"));
+}
+var media = (v[0] + v[1] + v[2] + v[3] + v[4] + v[5] + v[6] + v[7] + v[8] + v[9])/10;
+alert("A média foi de: "+media);
+//
+var melhores = "";
+for(var c1 = 0; c1 <= c ; c1++){
+   if( v[c1] >= media ){
+     melhores = melhores+", "+v[c1];
+   }
+}
+alert("Aqueles que ultrapassaram a média foram os números: "+melhores);
+
+//4. Leia um vetor com dez números reais, calcule e mostre a quantidade de números negativos e a soma dos números positivos desse vetor.
+
+var v = [];
+var c = 0;
+var pos = 1;
+alert("Por favor, digite dez números.")
+for(; c <= 9 ; c++, pos++){
+   v[c] = parseInt(prompt("Digite o número na posição "+pos+" :"));
+}
+var nega = ""
+var nn = 0
+for(c = 0 ; c <= 9 ; c++){
+   if( v[c] < 0 ){
+     nega = nega + "," + v[c];
+     nn += 1;
+   }
+}
+alert("No vetor criado existem "+nn+" números negativos, eles são: "+nega);
+var soma = 0;
+for(c = 0 ; c <= 9 ; c++){
+   if( v[c] > 0 ){
+     soma = soma + v[c];
+   }
+}
+alert("A soma dos números positivos do vetor é "+soma);
+
+//5. Leia um vetor com 15 posições, calcule e mostre:
+//a) O maior elemento do vetor e em que posição esse elemento se encontra;
+//b) O menor elemento do vetor e em que posição esse elemento se encontra.
+
+var v = [];
+var c = 0;
+var pos = 1;
+alert("Por favor, digite quinze números.")
+for(; c <= 14 ; c++, pos++){
+   v[c] = parseInt(prompt("Digite o número na posição "+pos+" :"));
+}
+//a
+var maior = 0;
+var pm = 0;
+for( c = 0 ; c <= 14 ; c++){
+   if( v[c] >= maior ){
+     maior = v[c];
+     pm = c;
+   }
+}
+//b
+var pme = 0
+var menor = maior;
+for( c = 0 ; c <= 14 ; c++){
+   if( v[c] <= menor ){
+     menor = v[c];
+     pme = c;
+   }
+}
+alert("O maior número do vetor é o "+maior+", ele está na posição "+pm+".");
+alert("O menor número do vetor é o "+menor+", ele está na posição "+pme+".");
+
+//6. Leia 2 vetores de 10 posições e some os elementos de mesma posição e armazene o resultado em um terceiro vetor (também de 10 posições).
+
+var v = [];
+var w = [];
+var t = [];
+var c = 0;
+var pos = 1;
+alert("Por favor, digite dez números.")
+for( c = 0; c <= 9 ; c++, pos++){
+   v[c] = parseInt(prompt("Digite o número na posição "+pos+" do primeiro vetor:"));
+}
+for(pos = 0, c = 0; c <= 9 ; c++, pos++){
+   w[c] = parseInt(prompt("Digite o número na posição "+pos+" do segundo vetor:"));
+}
+for( c = 0; c <= 9 ; c++ ){
+   t[c] = v[c] + w[c];
+}
+alert("O terceiro vetor é T = [ "+t+" ] .");
+
+//7. Leia um vetor de 20 posições e uma variável A. A seguir, armazene em um outro vetor o produto da variável A pelo primeiro vetor.
+
+var v = [];
+var w = [];
+var c = 0;
+var pos = 1;
+alert("Por favor, digite vinte números.")
+for( c = 0; c <= 19; c++, pos++){
+   v[c] = parseInt(prompt("Digite o número na posição "+pos+" do primeiro vetor:"));
+}
+var a = parseInt(prompt("Agora digite um valor: "));
+for( c = 0; c <= 19 ; c++ ){
+   w[c] = v[c]*a;
+}
+alert("O vetor criado é W = [ "+w+" ] .");
+
+//8. Um time de basquete possui 12 jogadores. Elabore um programa que leia dois vetores NOME e ALTURA, calcule e imprima o nome do jogador mais alto e a sua altura.
+
+var n = [];
+var a = [];
+var c = 0;
+var pos = 1;
+alert("Por favor, digite o nome dos 12 jogadores.")
+for(pos =1 ; c < 5 ; c++, pos++){
+   n[c] = prompt("Digite o jogador número "+pos+" :");
+}
+alert("Por favor, digite a altura dos 12 jogadores.")
+for(pos = 1, c = 0 ; c < 5 ; c++, pos++){
+   a[c] = prompt("Digite a altura do jogador número "+pos+" :");
+}
+var maior = 0;
+var ma = 0;
+for( c = 0 ; c < 5 ; c++){
+   if( a[c] >= maior ){
+     maior = a[c];
+     ma = c;
+   }
+}
+alert("O jogador mais alto é o "+n[ma]+", enquanto a sua altura é de : "+maior+" metros.");
+
+//9. Dados três vetores reais de 5 posições, leia estes vetores (usando uma estrutura de repetição), calcule a expressão ((vetor1 * vetor3) / vetor2 ), utilizando os valores da mesma posição, armazenando em um quarto vetor, também de números reais de 5 posições. No final, imprima os números do quarto vetor.
+
+var I = [];
+var II = [];
+var III = [];
+var IV = [];
+var c = 0;
+var pos = 1;
+for( pos = 1, c = 0; c < 5; pos++, c++ ){
+   I[c] = parseInt(prompt("Escreva o número correspondente a posição "+pos+" do vetor I: "));
+}
+for( pos = 1, c = 0; c < 5; pos++, c++ ){
+   II[c] = parseInt(prompt("Escreva o número correspondente a posição "+pos+" do vetor II: "));
+}
+for( pos = 1, c = 0; c < 5; pos++, c++ ){
+   III[c] = parseInt(prompt("Escreva o número correspondente a posição "+pos+" do vetor III: "));
+}
+for( c = 0; c < 5; c++ ){
+   IV[c] = ((I[c]*III[c])/II[c]) ;
+}
+alert("O vetor criado é o seguinte IV = [ "+IV+"] .");
+
+//10. Leia um conjunto de 30 valores e os coloque em 2 vetores conforme estes valores forem pares ou ímpares. O tamanho dos vetores é de 15 posições. Se algum vetor estiver cheio, escrever uma mensagem informando que o vetor já está cheio. Terminada a leitura, escrever o conteúdo dos dois vetores.
+
+var t = [];
+var impar = [];
+var par = [];
+var c = 0;
+var pos = 1;
+for( pos = 1, c = 0; c < 30 ; pos++, c++ ){
+   t[c] = prompt("Escreva o valor "+pos+" do vetor 'T' .");
+}
+for( c = 0; c < 15 ; c++ ){
+   if( t[c]%2 !== 0 ){
+     impar[c] = t[c];
+   }
+   if( c == 14 ){
+     alert("O vetor 'IMPAR' está cheio...");
+   }
+}
+for( c = 0; c < 15 ; c++ ){
+   if( t[c]%2 == 0 ){
+     par[c] = t[c];
+   }
+   if( c == 14 ){
+     alert("O vetor 'PAR' está cheio...");
+   }
+}
+alert("Este é o vetor 'PAR' = [ "+par+"] ,  enquanto este é o vetor 'IMPAR' = ["+impar+"] .");
+
+//11. Leia um vetor de 20 posições e mostre-o. Em seguida, troque o primeiro elemento com o último, o segundo com o penúltimo, o terceiro com o antepenúltimo, e assim sucessivamente. Mostre o novo vetor depois da troca.
+
+var v = [];
+var V8 = [];
+var c = 0;
+var c1 = 0;
+var pos = 1
+for( pos = 1, c = 0; c < 20; pos++, c++){
+   v[c] = parseInt(prompt("Escreva o número da posição "+pos+" do vetor 'V': "));
+}
+for( c1 = 0,c = 19; c1 < 20 ; c--, c1++ ){
+   V8[c1] = v[c];
+}
+alert("O novo vetor criado foi o seguinte 'V8' = [ "+V8+" ] .");
+
+//12. Leia um vetor A de 6 elementos contendo o gabarito da Mega Sena. A seguir, leia um vetor B de 10 elementos contendo uma aposta. Escreva quantos pontos fez o apostador, e se ele fez a sena (6 acertos), a quina (5 acertos) ou a quadra (4 acertos).
+
+var A = [];
+var B = [];
+var c = 0;
+var pos = 1
+for( pos = 1, c = 0; c < 6; pos++, c++){
+   A[c] = parseInt(prompt("Escreva o gabarito da posição "+pos+" da MEGA SENA: "));
+}
+for( pos = 1, c = 0; c < 10; pos++, c++){
+   B[c] = parseInt(prompt("Escreva o número da posição "+pos+" da aposta para a MEGA SENA: "));
+}
+var c1 = 0;
+var ponts = 0;
+for( c = 0; c < 10; c++){
+   for( c1 = 0; c1 < 6; c1++ ){
+      if( A[c1] == B[c] ){
+        ponts += 1;
+      }
+   }
+}
+if( ponts < 4 ){
+  alert("Só lamento colega");
+}
+if( ponts == 4 ){
+  alert("QUADRA!");
+}
+if( ponts == 5 ){
+  alert("QUINA!");
+}
+if( ponts >= 6 ){
+  alert("SENA!");
+}
+
+

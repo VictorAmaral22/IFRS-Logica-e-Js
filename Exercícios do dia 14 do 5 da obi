@@ -1,0 +1,64 @@
+//Aula do dia 14 do 5
+
+//c=c+1 pode ser escrito como c++
+
+//Exercícios da olimpíada de informática.
+
+//Junior /f1/ Plantação de morangos
+
+scanf("%d","ac")
+scanf("%d","al")
+scanf("%d","bc")
+scanf("%d","bl")
+ra=ac*al;
+rb=bc*bl;
+if(ra>=rb){
+printf("%d",ra)
+}
+else{
+printf("%d",rb)
+}
+
+//2015/f1. móbile
+var a,b,c,d;
+scanf("%d","a")
+scanf("%d","b")
+scanf("%d","c")
+scanf("%d","d")
+if( a ==(b+c+d) && (b+c)== d && b == c ){
+printf("S\n")
+}
+else{
+printf("N\n")
+}
+
+//2014/f1/fliper
+var p,r;
+scanf("%d","p")
+scanf("%d","r")
+if( p==1 && r==1 ){
+printf("A")
+}
+if( p==1 && r===0 ){
+printf("B")
+}
+if( p===0 && (r===0 || r==1)){
+printf("C")
+}
+
+//gANGORRA hehe
+
+var p1,c1,p2,c2;
+scanf("%d%d%d%d","p1","c1","p2","c2")
+if((p1*c1)==(p2*c2)){
+printf("0\n")
+}
+if((p1*c1)<(p2*c2)){
+printf("-1")
+}
+if((p1*c1)>(p2*c2)){
+printf("1")
+}
+
+
+

@@ -1,0 +1,100 @@
+//Sudoku
+
+var menu = "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair";
+
+var mov;
+
+var sair = "N"
+
+//O while que faz o jogo inteiro rodar
+while( sair == "N" || sair == "n" ){
+
+
+//Menu
+
+     mov = prompt(menu);
+     while( mov!== "" ){
+
+//Movimentação para cima pelo menu de inicialização
+          if( mov == "w" || mov == "W" ){
+
+            switch (menu) {
+
+                  case "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair":
+                      menu = "     Jogar   \n    Como jogar   \n     Creditos   \n    ---SAIR---";
+                      break;
+
+                  case "     Jogar   \n    Como jogar   \n     Creditos   \n    ---SAIR---":
+                      menu = "     Jogar   \n    Como jogar   \n  ---CREDITOS---\n       Sair";
+                      break;
+
+                  case "     Jogar   \n    Como jogar   \n  ---CREDITOS---\n       Sair":
+                      menu = "     Jogar   \n ---COMO JOGAR---\n     Creditos   \n       Sair";
+                      break;
+
+                  case  "     Jogar   \n ---COMO JOGAR---\n     Creditos   \n       Sair":
+                      menu = "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair";
+                      break;
+
+            }mov = prompt(menu);;
+
+          }
+
+//Movimentação para baixo pelo menu de inicialização
+          if( mov == "s" || mov == "S" ){
+
+            switch (menu) {
+
+                  case "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair":
+                      menu = "     Jogar   \n ---COMO JOGAR---\n     Creditos   \n       Sair";
+                      break;
+
+                  case  "     Jogar   \n ---COMO JOGAR---\n     Creditos   \n       Sair":
+                      menu = "     Jogar   \n    Como jogar   \n  ---CREDITOS---\n       Sair";
+                      break;
+
+                  case  "     Jogar   \n    Como jogar   \n  ---CREDITOS---\n       Sair":
+                      menu = "     Jogar   \n    Como jogar   \n     Creditos   \n    ---SAIR---";
+                      break;
+
+                  case  "     Jogar   \n    Como jogar   \n     Creditos   \n    ---SAIR---":
+                      menu = "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair";
+                      break;
+
+            }mov = prompt(menu);;
+
+          }
+
+     }
+
+//Caso a pessoa queira aprender como se joga
+     if( menu == "     Jogar   \n ---COMO JOGAR---\n     Creditos   \n       Sair" ){
+       var voltar = "N";
+
+       while( voltar == "N" || voltar == "n" ){
+            alert("Bem vindo ao Sudoku the game!\nEste é um jogo com o objetivo de desenvolver o raciocínio lógico, ele funciona da seguinte maneira:\n \n-Temos uma  tabela com números ja dispostos nela.\n__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 2 |  | 4 | 1 |\n3-| 4 |   |   |   |\n4-|   |   |   |   |\n-O objetivo do jogo é preencher a tabela com números de 1 a 4, sem repeti-los na mesma linha.\n-Por exemplo:\n__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 2 | 3 | 4 | 1 |\n3-| 4 | 1 | 2 | 3 |\n4-| 3 | 4 | 1 | 2 |");
+            voltar = prompt("Deseja voltar ao menu?\n(Responda s(Para sim) e N(Para não)");
+
+       }
+
+       mov = 1;
+       menu = "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair";
+
+     }
+
+//Caso a pessoa deseja sair do jogo
+     if( menu == "     Jogar   \n    Como jogar   \n     Creditos   \n    ---SAIR---" ){
+       sair=prompt("Tem certeza que deseja sair?\n S( Para sim ) ou N(Para não)");
+
+     }
+
+//Caso a pessoa queira jogar
+     if( menu == "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair" ){
+
+     //O jogo inteiro
+ 
+      mov = 1;
+       menu = "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair";
+
+     }
+}

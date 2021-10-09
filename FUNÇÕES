@@ -1,0 +1,199 @@
+//FUNÇÕES
+
+function Calcula_IMC(peso, altura){
+     imc=peso/(altura*altura);
+     return imc;
+}
+var p = parseInt(prompt("Peso"));
+var a = parseInt(prompt("Peso"));
+var meuIMC = Calcula_IMC(p, a);
+alert("Meu IMC é "+meuIMC);
+
+function Calcula_IMC(p, a){
+     imc=peso/(altura*altura);
+     return imc;
+}
+var p = parseInt(prompt("Peso"));
+var a = parseInt(prompt("Peso"));
+var meuIMC = Calcula_IMC(p, a);
+alert("Meu IMC é "+meuIMC);
+
+//ou
+
+function Calcula_IMC(peso, altura){
+     imc=peso/(altura*altura);
+     alert("Meu IMC é "+meuIMC);
+}
+var p = parseInt(prompt("Peso"));
+var a = parseInt(prompt("Peso"));
+Calcula_IMC(p, a);
+
+
+/////////////////////
+
+var x = 10;
+function y(){
+     alert(x);
+     var x = 20;
+     alert(x);
+}
+y();
+alert(x);
+
+//undefined
+//20
+//10
+
+
+var x = 10;
+function y(){
+     alert(x);
+     x = 20;
+     alert(x);
+}
+y();
+alert(x);
+
+//10
+//20
+//20
+
+//Crie um programa de calcula a velocidade média de um corredor que percorreu x metros em x segundos usando a fórmula 
+// - valocidade = distância/tempo
+
+
+function vmedia( distancia, tempo){
+     var d = parseInt(prompt("Digite a distância percorrida pelo corredor: "));
+     var t = parseInt(prompt("Digite o tempo em que o corredor correu: "));
+     var v = d/t;  
+     alert(v);
+}
+vmedia();
+
+//OUTRO PROGRAMA
+
+function troco( preco, pago){
+     var preco = parseInt(prompt("Digite o preço do produto: ")); 
+     var pago = parseInt(prompt("Digite o que foi pago: "));
+     var troco = 0;
+     if( preco == pago ){
+       alert("O cliente pagou o valor exato do produto.");
+     }
+     if( preco > pago ){
+       troco = preco-pago;
+       alert("O cliente lhe deve R$"+troco+".");
+     }
+     if( preco < pago ){
+       troco = pago-preco;
+       alert("Tu deves cliente R$"+troco+" ao cliente.");
+     }
+}
+troco();
+
+
+//Exercício das olimpídadas de informática
+
+var manda_bala = prompt("Por favor escreva palavras separadas por vírgula: ");
+var entropia = prompt("Mande as letras que encontraste na sopa: ");
+function sopadeletras( manda_bala, entropia ){
+     var splitter = manda_bala.split(", ");
+     var letras = entropia.split("");
+     var c = 0;
+     while( c <= splitter.lenght ){
+          var palavra = splitter[c];
+          var c1 = 0;
+          while( c1 <= palavra.lenght ){
+               
+          } 
+
+
+
+
+
+     }
+
+
+
+}
+
+
+var manda_bala = prompt("Por favor escreva palavras separadas por vírgula: ");
+var entropia = prompt("Mande as letras que encontraste na sopa: ");
+
+function sopadeletras( manda_bala, entropia ){
+     var splitter = manda_bala.split(", ");
+     var letraspalavras = splitter.split("");
+     var letras = entropia.split("");
+
+     letraspalavra.sort();
+     letras.sort;
+
+     //Contando as letras das palavras
+     var c = 0;
+     var c1 = 0;
+     var alf = [ "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" ];
+     while( c <= letraspalavras.length){
+          while()          
+               if( letraspalavras[c] == alf[c1] ){
+            
+          }
+
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

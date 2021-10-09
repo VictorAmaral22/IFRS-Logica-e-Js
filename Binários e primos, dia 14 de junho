@@ -1,0 +1,17 @@
+//Crie um programa que leia números e escreva os em binário
+
+var n=parseInt(prompt("Indique um número: "));
+
+//Verificar se um número é primo
+
+var n=parseInt(prompt("Indique um número: "));
+if(n%1=0 && n%n=0 && n%4!==0 ){
+alert("É primo");
+}
+
+
+var n=parseInt(prompt("Indique um número: "));
+if(n==2 || n==3 || n==5 || n==7){
+alert("É primo");
+}
+else()

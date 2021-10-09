@@ -1,0 +1,70 @@
+var menu = "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair";
+if( menu == "  ---JOGAR---\n    Como jogar   \n     Creditos   \n       Sair" ){
+var f1 = "__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 2 |   | 4 | 1 |\n3-| 4 |   |   |   |\n4-|   |   |   |   |";
+var f2 = "__| A | B | C | D |\n1-|   | 2 | 4 |   |\n2-| 1 |   |   | 3 |\n3-| 4 |   |   | 2 |\n4-|   | 1 | 3 |   |";
+var f3 = "__| A | B | C | D |\n1-| 3 |   | 4 |   |\n2-|   | 1 |   | 3 |\n3-| 2 | 3 |   |   |\n4-| 1 |   |   | 2 |";
+var f4 = "__| A | B | C | D |\n1-|   |   |   | 4 |\n2-| 1 |   |   |   |\n3-|   |   |   | 3 |\n4-|   | 1 |   |   |";
+var f5 = "__| A | B | C | D |\n1-| 3 | 4 | 1 |   |\n2-|   | 2 |   |   |\n3-|   |   | 2 |   |\n4-|   | 1 | 4 | 3 |";
+var fases = "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--";
+var mov = prompt(fases);
+     while( mov!== "" ){
+//Para cima
+          if( mov == "w" || mov == "W" ){
+            switch (fases) {
+                  case "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--":
+                      fases = "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--"; 
+                      break;
+                  case "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--":
+                      fases = "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--";
+                      break;
+                  case "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--":
+                      fases = "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--";
+                      break;
+                  case "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--":
+                      fases = "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--";
+                      break;
+                  case "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--":
+                      fases = "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--";
+                      break;
+            }mov = prompt(fases);
+          }
+     }
+}
+
+
+Escolha a fase que você deseja jogar:
+
+__| A | B | C | D |
+1-| 1 | 2 | 3 | 4 |
+2-| 2 |   | 4 | 1 |   
+3-| 4 |   |   |   |   
+4-|   |   |   |   |   
+     --FASE 1--     
+
+__| A | B | C | D |
+1-|   | 2 | 4 |   |
+2-| 1 |   |   | 3 |
+3-| 4 |   |   | 2 |   
+4-|   | 1 | 3 |   |
+       Fase 2
+
+__| A | B | C | D |
+1-| 3 |   | 4 |   |
+2-|   | 1 |   | 3 |
+3-| 2 | 3 |   |   |
+4-| 1 |   |   | 2 |
+       Fase 3
+
+__| A | B | C | D |
+1-|   |   |   | 4 |
+2-| 1 |   |   |   | 
+3-|   |   |   | 3 |
+4-|   | 1 |   |   |
+       Fase 4
+
+__| A | B | C | D |
+1-| 3 | 4 | 1 |   |
+2-|   | 2 |   |   |
+3-|   |   | 2 |   |
+4-|   | 1 | 4 | 3 |
+       Fase 5

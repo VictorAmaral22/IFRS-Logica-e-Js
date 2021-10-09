@@ -1,0 +1,52 @@
+//ex1
+
+var x,y,z;
+x=parseInt(prompt("Indique o valor da variável X: "));
+y=parseInt(prompt("Indique o valor da variável Y: "));
+z=parseInt(prompt("Indique o valor da variável Z: "));
+if(x+y>=z){
+alert("É um triângulo!")
+   if(x==y==z){
+   alert("É um triângulo equilátrero")
+   }
+   if(x==y && x!=z && y!=z || x==z && x!=y && z!=y || y==z && y!=x && z!=x){   
+   alert("É um triângulo isósceles!") 
+   }
+   if(x!=y!=z){
+   alert("É um triângulo escaleno!")
+}else{
+alert("Não é um triângulo!")
+}
+
+//exc2
+
+var valor;
+valor=parseInt(prompt("Indique o valor sacado: "));
+
+
+
+
+
+
+
+
+//exc3
+
+var rf,r,num1,num2;
+num1=parseInt(prompt("Indique o valor do número um: "));
+num2=parseInt(prompt("Indique o valor do número 2: "));
+r=0
+r=num1+num2;
+rf=0;
+if(r%2==0){
+rf=r+20;
+alert(rf)
+}
+if(r%3==0){
+rf=r+30;
+alert(rf)
+}
+if( r%2!=0 && r%3!=0 ){
+alert(r)
+}
+

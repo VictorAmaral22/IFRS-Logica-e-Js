@@ -1,0 +1,108 @@
+                                                                 //Comando while
+
+var ano=1930;
+while(ano<=2014){
+  console.log(ano+" tem copa\n");
+ano=ano+4 
+}
+  console.log("Fim!");
+
+                                                                //O while é um loop
+
+var ano=1930;
+while(ano<=2014){
+  console.log(ano+" tem copa\n");
+}
+  console.log("Fim!");
+
+                                        //Mas até que ele seja falso, se isso não aconteçer ele fica pra sempre efetuando a sua ação.
+
+
+//Neste programa, ele pega todos os anos que tiveram copa do mundo desde 1930, e exibe em linhas espaçadas.
+
+var ano=1930;
+while(ano<=2014){
+  console.log(ano+" tem copa\n");
+ano=ano+4 
+}
+  console.log("Fim!");
+
+//Aqui o programa pega os números que tu digita e alerta se são impares ou pares, e assim que digites 0, ele dá fim de jogo.
+var n,p,i;
+while(n!==0){
+  n=parseInt(prompt("Digite N: "));
+  if(n%2===0){
+    alert("É par");
+    }else{
+      alert("É ímpar!");
+      }
+n=parseInt(prompt("Digite N: "));
+}
+alert("Fim de jogo!");
+
+//Aqui ele faz basicamente o mesmo que o anterior, porém ele os-organiza em pares e ímpares depois do fim do jogo.
+var n,p,i;
+ p="Pares: ";
+ i="Impares :";
+ n=parseInt(prompt("Digite N: "));
+while(n!==0){
+ if( n%2===0 ){
+     p=p+n+","    
+  }
+ else{
+      i=i+n+","      
+  }
+n=parseInt(prompt("Digite N: "));
+}
+alert("Fim de jogo!");
+alert(p+"\n"+i);
+
+//Mostrar quantos número foram digitados
+var n,q;
+q=0
+n=parseInt(prompt("Indique um valor: "));
+while(n!==0){
+q=q+1;
+n=parseInt(prompt("Indique um valor: "))
+  }
+alert("Fim de jogo!");
+alert("A quantidade de números digitados foi de: "+q);
+
+//Mostrar a soma dos número digitados
+var n,q;
+q=0
+n=parseInt(prompt("Indique um valor: "));
+while(n!==0){
+q=q+n;
+n=parseInt(prompt("Indique um valor: "))
+  }
+alert("Fim de jogo!");
+alert("A soma dos números digitados foi de: "+q);
+
+//Mostrar a média dos números digitados
+var n,q,m;
+q=0
+m=0
+n=parseInt(prompt("Indique um valor: "));
+while(n!==0){
+q=q+n;
+m=m+1
+n=parseInt(prompt("Indique um valor: "))
+  }
+alert("Fim de jogo!");
+alert("A média dos números digitados foi de: "+(q/m));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

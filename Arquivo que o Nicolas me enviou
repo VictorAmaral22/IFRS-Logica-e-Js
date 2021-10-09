@@ -1,0 +1,88 @@
+//Aula
+
+
+
+alert("Digite 0 para sair");
+
+while(true){
+  var num = Number(prompt("Número: "));
+
+  if (num == 0 || isNaN(num)){
+    var sair = prompt("Deseja sair");
+    if (sair === "S"){
+      break;
+    } else {
+      continue;
+    }
+  }
+  if (num%2 == 0){
+    alert("O dobro de " +num+"é: " + num*2);
+  }else{
+    alert("O triplo de "+ num + "è: " + num*3);
+  }
+}
+alert("Fim");
+
+
+
+//Do == While
+
+do {
+
+
+}
+while(condição)
+
+
+//Ex
+
+var c=1
+do{
+  console.log(c);
+  c++
+}while c( == 10)
+
+
+//Aula for
+
+for(inicialização;condição;incremento){
+
+}
+
+//Ex
+for (c=1;c<=10;c++){
+  console.log(c);
+}
+
+//Ex2 
+for (c= 10; c>0;c--){
+  console.log(c);
+}
+
+
+
+
+
+//Exercicio
+//programa que leia um número e verifique se ele é ou não perfeito.Um número perfeito é aquele que é igual a somo dos seus divisores inteiros (exceto o proprio número)O programa deve exibir os divisores do número e a soma deles EX;25: 1 2 4 7 14
+var n = Number(prompt("Digite um número para ver se é perfeito "));
+var c,r,c2,c3
+for(c = 0,r = 0,c2 = 0,c3 = "";true;c++){
+  r = n%c
+  if (r === 0){
+    c2 = c2 + c
+    c3 = c3 + c + " , "
+  }
+  if (c2 == n ){
+  alert("é perfeito\nOs número somados são "+c3+"\nA soma é de "+c2);
+  break;
+  }
+  if (c >= n)
+  alert()
+  break;
+}
+
+
+
+
+

@@ -1,0 +1,104 @@
+//Strings em Java Script
+
+length
+
+var x = "     ola     ";
+alert(x.length);//13
+
+var x = "     ola     ";
+alert("     ola     ".length);//13
+
+charAt
+
+var x = "123abc";
+
+x.charAt(0);  //1
+x[0];   //1
+
+var x = "123abc";
+
+alert(x.length);//6
+x.charAt(6);
+//' '
+x.charAt(5);
+//'c'
+
+
+
+//Ler uma palavra e retorná-la invertida em letras maiúsculas
+
+var p = prompt("Escreve uma palavra ae: ");
+var nova = p.toUpperCase();
+var n = nova.length;
+var i = "";
+while( n >= 0 ){
+     i=i+(nova.charAt(n));
+     n--;
+}
+alert(i);
+
+var p = prompt("Escreve uma palavra ae: ");
+var nova = p.toUpperCase();
+var n = nova.length;
+var i = "";
+while( n-1 >= 0 ){
+     i=i+(nova.charAt(n-1));
+     n--;
+}
+if( i == nova ){
+  alert(nova);
+}else{
+alert("Hoje naum");
+}
+
+
+//repeat
+
+var y =  "1000000".repeat(1000000); 
+console.log(y);
+
+//indexOf
+alert(("victor".repeat(2)).indexOf("to"));
+alert(("victor".repeat(2)).lastIndexOf("to"));
+
+alert("victor".startsWith("to"));
+alert("victor".startsWith("vic"));
+
+
+
+alert(("victor".repeat(3)).replace("c",""));
+
+
+//Lê uma string e retorna quantas vogais têm na string
+
+var p = prompt("Escreva uma palavra: ");
+var q = (p.length)-1;
+var s = 0;
+var a = 0;
+var n;
+while( q >= s ){
+     if( p.charAt(s) == "a" || p.charAt(s) == "e" || p.charAt(s) == "i" || p.charAt(s) == "o" || p.charAt(s) == "u" || p.charAt(s) == "A" || p.charAt(s) == "E" || p.charAt(s) == "I" || p.charAt(s) == "O" || p.charAt(s) == "U" ){
+       a = a + 1;
+     }
+     s++;
+}     
+alert(a+' vogais na palavra '+p);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,218 @@
+//Exercício número 1
+
+var q,num,soma;
+q=1;
+soma=0;
+num=parseInt(prompt("Indique um número: "));
+while(q<=10){
+soma=soma+num;
+q++
+num=parseInt(prompt("Indique um número: "));
+}
+alert(soma);
+
+
+//ex 2
+
+var n,s,q,n1,m,media;
+s=0;
+q=0;
+n=parseInt(prompt("Indique um limite: "));
+m=0
+while(n>0){
+s=s+n;
+q=q+n*n;
+m=m+1;
+n=n-1;
+}
+media=s/m;
+alert("A soma dos quadrados é de "+q+". Já a média dos números é de "+media+".");
+
+
+//ex 3 -  Exibir os quadrados de números digitados pelo usuário, até que ele digite um número negativo
+
+var n,q;
+n=parseInt(prompt("Insira um valor: "));
+while(n>=0){
+q=n**2;
+alert(q);
+n=parseInt(prompt("Insira um valor: "));
+}
+
+//ex4 - Exibir os valores da função F(x) = x -5x+6 para valores de x digitados pelo teclado, até que o
+//usuário digite zero para x.
+
+var x,y;
+x=parseInt(prompt("Indique um valor de x para a função F(x)= x-5x+6 : "));
+y=0
+while((x-5*x+6)!==0){
+y=x-5*x+6;
+alert(y);
+x=parseInt(prompt("Indique um número: "));
+}
+alert("Parabéns! Você descobriu a raiz da função.");
+
+//tenho que refazer
+
+//ex5 - Calcular o faturamento total mensal de um armazém, sabendo-se que, para cada uma das
+//mercadorias com que o armazém trabalha dispõe-se dos seguintes dados:
+//− o nome da mercadoria;
+//− o seu preço unitário;
+//− a quantidade total vendida no mês.
+//O faturamento total do armazém será calculado somando-se o total faturado por cada
+//mercadoria, que é igual a quantidade vendida da mercadoria vezes o seu preço unitário. O
+//número de mercadorias comercializadas pelo armazém deve ser informado pelo usuário
+
+var nomes,num,n1,nome,preco,quant,total;
+num=prompt("Quantos produtos diferêntes você vendeu?");
+preco=0;
+quant=0;
+total=0;
+n1=num;
+nomes="Os produtos vendidos foram: ";
+while( num>0 ){
+num=(n1--);
+total=total+(quant*preco);
+if(num>0 && num!==1){
+nome=prompt("Diga o nome do produto: ");
+preco=parseInt(prompt("Indique o valor do produto: "));
+quant=parseInt(prompt("Indique a quantidade vendida desse produto: "));nomes=nomes+nome+", ";
+}
+if(num==1){
+nome=prompt("Diga o nome do produto: ");
+preco=parseInt(prompt("Indique o valor do produto: "));
+quant=parseInt(prompt("Indique a quantidade vendida desse produto: "));nomes=nomes+nome+". ";
+}
+}
+alert(nomes+"Já o total vendido foi de: R$"+total+".");
+
+//ex6 - Apresentar os quadrados dos números inteiros de 15 a 200.
+
+var n=15;
+var n1=n;
+var q="Os quadrados são: ";
+while( n<=200 ){
+   if(n!==200){
+     q=q+n**2+",";
+     n=(n1++);
+   }
+   if(n==200){
+    q=q+n**2+".";
+     n=(n1++);
+   }   
+}
+console.log(q);
+
+//ex7 -  Apresentar os resultados de uma tabuada de um número qualquer, a qual deve ser mostrada no
+//seguinte formato, considerando como exemplo o fornecimento do número 2:
+//2 x 1 = 2
+//2 x 2 = 4
+//2 x 3 = 6
+//(...)
+//2 x 10 = 20
+
+var c,n,r,t;
+n=parseInt(prompt("Insira um número: "));
+c=1;
+r="A tabuada do número "+n+" é a seguinte: \n";
+while(c<=10){
+t=n*c;
+r=r+n+" x "+c+" = "+t+"\n";
+c=c+1;
+}
+alert(r);
+
+//ex8  Apresentar o somatório dos valores pares existentes na faixa de 1 até 500.
+
+var c,cif;
+c=500;
+cif=0;
+while(1<=c){
+if(c%2==0){
+cif=cif+c;
+}
+c=c-1;
+}
+alert(cif);
+
+//ex 9  Apresentar todos os valores numéricos inteiros ímpares situados na faixa de 0 a 20
+
+var c,cif;
+c=0;
+cif=": ";
+while(c<=20){
+if(c%2!==0 && c!==19){
+cif=cif+c+", ";
+}
+if(c==19){
+ cif=cif+c+"."; 
+}
+c+=1;
+}
+alert("Os valores ímpares são"+cif);
+
+
+//ex10 Apresentar os resultados das potências de 3, variando o expoente de 0 (zero) até 15.
+ 
+var x;
+x=0
+while(x<=15){
+   console.log("3 na potência de "+x+": "+(3**x));
+   x+=1
+}
+
+//ex 11 Calcular N! (fatorial de N), sendo que o valor de N é fornecido pelo usuário e sabendo que:
+//N! = 1 x 2 x 3 x ... x (N - 1) x N
+//0! = 1, por definição 
+
+var c,c1,n;
+n=parseInt(prompt("Indique o valor de N: "));
+c=1
+c1=1
+if(n!==0){
+while(c<=n){
+c1=c1*c
+c+=1
+}
+}
+else{
+alert(1);
+}
+alert(c1);
+
+//ex 12 Sendo H = 1 + 1/2 + 1/3 + 1/4 + ... + 1/N, escreva um algoritmo e um programa em Java para
+//calcular o número H. O número N é fornecido pelo usuário.
+
+var c,h,n;
+n=parseInt(prompt("Indique o valor de N: "));
+c=1
+h=0
+if(n!==0){
+while(c<=n){
+h=h+(1/c);
+c+=1
+}
+}
+else{
+alert("Não existe.");
+}
+alert(h);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

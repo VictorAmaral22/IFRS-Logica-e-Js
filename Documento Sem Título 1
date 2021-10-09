@@ -1,0 +1,23 @@
+var num1=parseInt(prompt("Indique um número: "));
+var num2=parseInt(prompt("Indique outro número: "));
+var numeros=1;
+var mmc1=num1;
+var mmc2=num2;
+while(num1%2==0 && num2%2==0){
+num1=num1/2;
+num2=num2/2;
+numeros=numeros*2;
+}
+while(num1%3==0 && num2%3==0){
+num1=num1/3;
+num2=num2/3;
+numeros=numeros*3;
+}
+while(num1%5==0 && num2%5==0){
+num1=num1/5;
+num2=num2/5;
+numeros=numeros*5;
+}
+alert(numeros);
+
+

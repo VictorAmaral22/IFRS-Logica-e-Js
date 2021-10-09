@@ -1,0 +1,219 @@
+1. Escreva um programa que verifique se uma string é ou não um palíndromo (ou seja, se o inverso da cadeia é igual a ela). 
+
+//
+
+var p = prompt("Escreve uma palavra ae: ");
+p = p.toUpperCase()
+while( p.indexOf(" ") != -1 || p.indexOf("-") != -1 || p.indexOf(",") != -1 || p.indexOf(".") != -1 || p.indexOf(":") != -1 || p.indexOf(";") != -1 ){
+     p = p.replace(" ",""); 
+     p = p.replace("-","");
+     p = p.replace(",","");
+     p = p.replace(".","");
+     p = p.replace(":","");
+     p = p.replace(";","");
+}
+while( p.indexOf("Ó") != -1 || p.indexOf("Ò") != -1 || p.indexOf("Ô") != -1 || p.indexOf("Õ") != -1 ){
+     p = p.replace("Ó","O");
+     p = p.replace("Ò","O");
+     p = p.replace("Ô","O");
+     p = p.replace("Õ","O");
+}
+while( p.indexOf("Á") != -1 || p.indexOf("À") != -1 || p.indexOf("Â") != -1 || p.indexOf("Ã") != -1 ){
+     p = p.replace("Á","A");
+     p = p.replace("À","A");
+     p = p.replace("Â","A");
+     p = p.replace("Ã","A");
+}
+while( p.indexOf("È") != -1 || p.indexOf("É") != -1 || p.indexOf("Ê") != -1 || p.indexOf("Ẽ") != -1 ){
+     p = p.replace("È","E");
+     p = p.replace("É","E");
+     p = p.replace("Ê","E");
+     p = p.replace("Ẽ","E");     
+}
+while( p.indexOf("Í") != -1 ){
+     p = p.replace("Í","I");     
+}
+while( p.indexOf("Ú") != -1 || p.indexOf("Ù") != -1 || p.indexOf("Ü") != -1){
+     p = p.replace("Ú","U");
+     p = p.replace("Ü","U");
+     p = p.replace("Ù","U");         
+}
+while( p.indexOf("?") != -1 || p.indexOf("!") != -1 ){
+     p = p.replace("?","");
+     p = p.replace("!","");    
+}
+var n = p.length;
+var i = "";
+while( n-1 >= 0 ){
+     i=i+(p.charAt(n-1));
+     n--;
+}
+if( i == p ){
+  alert(p+" , "+i);
+}else{
+alert("Hoje naum");
+}
+
+//
+
+2. O codigo de Cesar é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de substituicao na qual cada letra do texto é substituída por outra, que se apresenta
+no alfabeto abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. Implemente um
+programa que faça uso desse Código de Cesar (3 posicoes),  entre com uma string (sem acentos e ç) e retorne a string codificada.
+
+//
+
+var p = prompt("Escreva uma frase: ");
+    p = p.toUpperCase();
+var l = (p.length)-1;
+var c = 0;
+var pn = "";
+var code = 0;
+while( c <= l ){
+     if( (p.charAt(c)) != " " && (p.charAt(c)) != "," &&  (p.charAt(c)) != "." && (p.charAt(c)) != "!" && (p.charAt(c)) != "?" &&  isNaN(p.charAt(c)) && (p.charAt(c)) != "Z" ){
+       code = ((p.charCodeAt(c))+3)
+       pn = pn + (String.fromCharCode(code));
+     }
+     if( (p.charAt(c)) == " " ){
+       pn = pn + " ";
+     }
+     if( (p.charAt(c)) == "Z"){
+       pn = pn + "C";
+     }
+     c++
+}
+alert(pn);
+
+//
+
+3. Escreva um programa que ao receber um texto e uma sequência de palavras, imprime as palavras da lista que não aparecem no texto. A sequência de palavras é fornecida ao programa como uma sequência de caracteres em que palavras consecutivas são separadas por um ou mais espaços em branco. 
+
+Ex: "Hoje tem trabalho de lógica"
+"hoje lógica prova matemática"
+Resultado: "prova matemática"
+
+//
+
+var text = prompt("Digite um texto: ").trim();
+var seq = prompt("Digite uma sequência de palavras: ").trim();
+var ls = seq.length-1;
+var c = 0;
+var p = "";
+var e = "";
+var m = 0;
+for(; seq.charAt(c) != " " ; c++){
+   m = c;
+}
+p = seq.slice(0,m).trim();
+if( text.indexOf(p) ){
+}
+alert(n);
+
+//
+
+4. Escreva um programa para ler uma frase (string) e contar o número de palavras dessa frase. Considere que as palavras estão separadas por espaços brancos ou vírgulas.
+
+Exemplos:
+“Lógica” contém 1 palavra.
+“Lógica de programação” contém 3 palavras.
+“computador, caderno e caneta” contém 4 palavras. 
+“linux    ” contém 1 palavra.
+“       ” não contém palavras.
+“ , , , ” não contém palavras.
+
+//
+
+var p = prompt();
+p = p.trim();
+var l = p.length-1;
+var c = 0;
+var n = 0;
+for(; c <= l ; c++){
+   if( p.indexOf(" , ") == -1 ){
+     if( p.charAt(c) == " " && p.charAt(c+1) != " " && p.charAt(l) != " "){
+       n++;
+     }
+   }
+}
+
+if( p.indexOf(" , ") == -1 && l != -1 ){
+  n++;
+}
+alert(n);
+
+//
+
+5. Escreva um programa que, a partir de um nome informado pelo usuário, exiba suas iniciais.
+As  iniciais  são  formadas  pela  primeira  letra  de  cada  nome,  sendo  que  todas  deverão aparecer em maiúsculas na saída do programa. Note que os conectores e, do, da, 
+dos, das, de, di, du não  são  considerados  nomes  e,  portanto,  não  devem  ser considerados  para  a obtenção  das  iniciais.  As  iniciais  devem  ser  impressas  em  maiúsculas,  ainda  que  o  nome seja entrado todo em minúsculas.
+
+Exemplos:
+Maria das Graças Pimenta => MGP
+João Carlos dos Santos => JCS
+José da Silva => JS
+Pedro Pereira Teixeira => PPT
+
+//
+
+var p = prompt();
+p = p.toUpperCase();
+var l = p.length-1;
+var i = "";
+var n = 0;
+var c = 0;
+p = p.trim();
+while( p.indexOf("DA") != -1 || p.indexOf("DE") != -1 || p.indexOf("DO") != -1 || p.indexOf("DU") != -1 || p.indexOf("DAS") != -1 || p.indexOf("DOS") != -1 || p.indexOf("DI") != -1){
+   p = p.replace("DAS", "");
+   p = p.replace("DOS", "");   
+   p = p.replace("DA", "");
+   p = p.replace("DE", "");   
+   p = p.replace("DO", "");
+   p = p.replace("DU", "");
+   p = p.replace("DI", "");
+}
+while( c <= 3 ){
+alert("1, "+i);
+    if( p.indexOf(" ") == -1 ){
+       i = i + p.charAt(0);
+      break
+    }
+alert("2, "+i);
+     if( p.indexOf(" ") != -1 ){
+          n = p.indexOf(" ");
+          i = i + p.charAt(0);
+          p = p.slice((n+1),l);
+     }
+     c++
+     p = p.trim();
+alert("3, "+i);
+}
+alert(i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

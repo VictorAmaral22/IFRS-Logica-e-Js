@@ -1,0 +1,102 @@
+var pontl, pontc, cl1, cl2, cc1, cc2;
+//
+cl1 = parseInt(prompt("Indique a carta 1 de Lia: "));
+cl2 = parseInt(prompt("Indique a carta 2 de Lia: "));
+cc1 = parseInt(prompt("Indique a carta 1 de Carolina: "));
+cc2 = parseInt(prompt("Indique a carta 2 de Carolina: "));
+//
+pontl = 0
+pontc = 0
+    //
+    //Cartas da Lia são iguais
+if (cl1 == cl2) {
+    pontl = (cl1 + cl2) * 2;
+} else {
+    pontl = cl1 + cl2;
+
+    //Cartas da Carolina são iguais
+    if (cc1 == cc2) {
+        pontc = (cc1 + cc2) * 2;
+    } else {
+        pontc = cc1 + cc2;
+
+        //Cartas da Lia são consecutivaas
+        if (cl1 + 1 == cl2 || cl1 - 1 == cl2 || cl2 + 1 == cl1 || cl2 - 1 == cl1) {
+            pontl = (cl1 + cl2) * 3;
+        } else {
+            pontl = cl1 + cl2;
+
+            //Cartas da Carolina são consecutivas
+            if (cc1 + 1 == cc2 || cc1 - 1 == cc2 || cc2 + 1 == cc1 || cc2 - 1 == cc1) {
+                pontc = (cc1 + cc2) * 3;
+            } else {
+                pontc = cc2 + cc2;
+
+                //Situação de empate
+                if (pontl == pontc) {
+                    alert("empate");
+                }
+                //Situação de Lia vençe
+                if (pontl > pontc) {
+                    alert("lia");
+                }
+                //Situação de Carolina vençe
+                if (pontl < pontc) {
+                    alert("carolina");
+                }
+            }
+        }
+    }
+}
+
+
+
+//Versão certa 
+
+var pontl, pontc, cl1, cl2, cc1, cc2;
+//
+cl1 = parseInt(prompt("Indique a carta 1 de Lia: "));
+cl2 = parseInt(prompt("Indique a carta 2 de Lia: "));
+cc1 = parseInt(prompt("Indique a carta 1 de Carolina: "));
+cc2 = parseInt(prompt("Indique a carta 2 de Carolina: "));
+//
+pontl = 0
+pontc = 0
+    //
+    //Cartas da Lia são iguais
+if (cl1 == cl2) {
+    pontl = (cl1 + cl2) * 2;
+} else {
+    if (cl1 + 1 == cl2 || cl1 - 1 == cl2 || cl2 + 1 == cl1 || cl2 - 1 == cl1) {
+        pontl = (cl1 + cl2) * 3;
+    } else {
+        pontl = cl1 + cl2;
+    }
+
+}
+//Cartas da Carolina são iguais
+if (cc1 == cc2) {
+    pontc = (cc1 + cc2) * 2;
+} else {
+    if (cc1 + 1 == cc2 || cc1 - 1 == cc2 || cc2 + 1 == cc1 || cc2 - 1 == cc1) {
+        pontc = (cc1 + cc2) * 3;
+    } else {
+        pontc = cc2 + cc2;
+    }
+
+}
+//Cartas da Lia são consecutivaas
+//Cartas da Carolina são consecutivas
+//Situação de empate
+if (pontl == pontc) {
+    alert("empate");
+}
+//Situação de Lia vençe
+if (pontl > pontc) {
+    alert("lia");
+}
+//Situação de Carolina vençe
+if (pontl < pontc) {
+    alert("carolina");
+}
+//Fim

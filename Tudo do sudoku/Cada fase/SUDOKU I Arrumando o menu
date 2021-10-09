@@ -1,0 +1,159 @@
+//Sudoku
+var mov;
+var sair = "N"
+alert("Aqui estão alguns comandos:\nPara se mover pelo menu > PARA CIMA - W\nPara se mover pelo menu > PARA BAIXO - S\nPara escolher alguma opção do menu > APERTE ENTER");
+
+//O while que faz o jogo inteiro rodar
+while( sair == "N" || sair == "n" ){ 
+     //Menus
+     var menujogar = "                   |SUDOKU|                      \n                    = 数独 =                        \n                                            \n                ---{ JOGAR }---                    \n                 Como  jogar                         \n                    Creditos                            \n                        Sair                                 \n                            \n  All rights reserved to fulaninho1234©";
+     var menusair = "                   |SUDOKU|                       \n                    = 数独 =                        \n                                            \n                      Jogar                         \n                 Como  jogar                         \n                    Creditos                            \n                ---{ SAIR }---                            \n                            \n  All rights reserved to fulaninho1234©";
+     var menucreditos = "                   |SUDOKU|                      \n                    = 数独 =                        \n                                            \n                      Jogar                        \n                 Como  jogar                         \n             ---{ CREDITOS }---                           \n                        Sair                                 \n                            \n  All rights reserved to fulaninho1234©";
+     var menucomo ="                   |SUDOKU|                      \n                    = 数独 =                        \n                                            \n                      Jogar                        \n            ---{ COMO  JOGAR }---                        \n                    Creditos                                \n                        Sair                                 \n                            \n  All rights reserved to fulaninho1234©";
+
+     var menu = menujogar;
+     //Menu
+     while( mov!= "" ){
+          mov = prompt(menu);
+          //Para cima
+          if( mov == "w" || mov == "W" ){
+            switch (menu) {
+                  case menujogar:
+                      menu = menusair;
+                      break;
+                  case menusair:
+                      menu = menucreditos
+                      break;
+                  case menucreditos:
+                      menu = menucomo;
+                      break;
+                  case  menucomo:
+                      menu = menujogar;
+                      break;
+            }
+          }
+          //Para baixo
+          if( mov == "s" || mov == "S" ){
+            switch (menu) {
+                  case menujogar:
+                      menu = menucomo
+                      break;
+                  case menucomo:
+                      menu = menucreditos
+                      break;
+                  case menucreditos:
+                      menu =  menusair;
+                      break;
+                  case menusair:
+                      menu = menujogar;
+                      break;
+            }
+          }
+          //O que o jogador não pode fazer
+          if( mov != "w" && mov != "W" && mov != "s" && mov != "S" && mov!=(isNaN(mov)) ){
+            var pergunta = prompt("Você está perdido?");
+            if( (pergunta == "s" || pergunta == "S" || pergunta == "SIM" || pergunta == "sim" || pergunta == "") && ( pergunta != "n" && pergunta != "N" && pergunta != "NÃO" && pergunta != "não" && pergunta != "NAO" && pergunta != "nao" ) ){
+              alert("Aqui estão alguns comandos:\nPara se mover pelo menu > PARA CIMA - W\nPara se mover pelo menu > PARA BAIXO - S\nPara escolher alguma opção do menu > APERTE ENTER");
+            }
+            if( (pergunta == "n" || pergunta == "N" || pergunta == "NÃO" || pergunta == "não" || pergunta == "NAO" || pergunta == "nao") && (pergunta != "s" && pergunta != "S" && pergunta != "SIM" && pergunta != "sim") ){
+            alert("Ok, só queria te ajudar...");
+            }
+          }
+     }
+     //Caso a pessoa queira aprender como se joga
+
+     if( menu == menucomo ){
+       var voltar = "N";
+       while( voltar != "s" && voltar!= "S" ){
+            alert("Bem vindo ao Sudoku the game!\nEste é um jogo com o objetivo de desenvolver o raciocínio lógico, ele funciona da seguinte maneira:\n \n-Temos uma  tabela com números ja dispostos nela.\n__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 2 |  | 4 | 1 |\n3-| 4 |   |   |   |\n4-|   |   |   |   |\n-O objetivo do jogo é preencher a tabela com números de 1 a 4, sem repeti-los na mesma linha.\n-Por exemplo:\n__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 2 | 3 | 4 | 1 |\n3-| 4 | 1 | 2 | 3 |\n4-| 3 | 4 | 1 | 2 |");
+            voltar = prompt("Deseja voltar ao menu?\n(Responda s(Para sim) e N(Para não)");
+       }
+       mov = 1;
+     }
+     //Caso a pessoa deseja sair do jogo
+     if( menu == menusair ){
+       sair = prompt("Tem certeza que deseja sair?\n S( Para sim ) ou N(Para não)");
+     }
+     //Caso a pessoa queira jogar
+     if( menu == menujogar ){
+       var menudefases = "n";  
+       while( menudefases == "n" ){
+          //Opção de sair das fases
+          var f1 = "__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 2 |   | 4 | 1 |\n3-| 4 |   |   |   |\n4-|   |   |   |   |";
+          var f2 = "__| A | B | C | D |\n1-|   | 2 | 4 |   |\n2-| 1 |   |   | 3 |\n3-| 4 |   |   | 2 |\n4-|   | 1 | 3 |   |";
+          var f3 = "__| A | B | C | D |\n1-| 3 |   | 4 |   |\n2-|   | 1 |   | 3 |\n3-| 2 | 3 |   |   |\n4-| 1 |   |   | 2 |";
+          var f4 = "__| A | B | C | D |\n1-| 3 | 4 | 1 |   |\n2-|   | 2 |   |   |\n3-|   |   | 2 |   |\n4-|   | 1 | 4 | 3 |";
+          var f5 = "__| A | B | C | D |\n1-| 1 | 2 | 3 | 4 |\n2-| 3 |   | 1 | 2 |\n3-| 2 |   |   |   |\n4-|   | 1 |   | 3 |";
+          var fases = "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--\n\n\nSe quiseres sair, digite: sair.";
+          var mov = prompt(fases);
+          while( mov != "sair" && mov != "Sair" && mov != "SAIR" ){
+               while( mov!== "" ){
+                    //Para cima
+                    if( mov == "w" || mov == "W" ){
+                      switch (fases) {
+                            case "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--\n\n\nSe quiseres sair, digite: sair."; 
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                      }mov = prompt(fases);
+                    }
+                    //Para baixo
+                    if( mov == "s" || mov == "S" ){
+                      switch (fases) {
+                            case "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--\n\n\nSe quiseres sair, digite: sair."; 
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                            case "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--\n\n\nSe quiseres sair, digite: sair.":
+                                fases = "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--\n\n\nSe quiseres sair, digite: sair.";
+                                break;
+                      }mov = prompt(fases);
+                    }
+            }
+       }
+       if( fases == "Escolha a fase que você deseja jogar:\n\n"+f1+"\n     --FASE 1--\n\n\nSe quiseres sair, digite: sair."){
+         alert("fase 1");
+       }mov = "sair"; 
+
+       //Fase 2
+       if( fases == "Escolha a fase que você deseja jogar:\n\n"+f2+"\n     --FASE 2--\n\n\nSe quiseres sair, digite: sair."){
+         alert("fase 2");
+       }mov = "sair"; 
+
+       //Fase 3
+       if( fases == "Escolha a fase que você deseja jogar:\n\n"+f3+"\n     --FASE 3--\n\n\nSe quiseres sair, digite: sair."){
+         alert("fase 3");
+       }mov = "sair";
+
+       //Fase 4
+       if( fases == "Escolha a fase que você deseja jogar:\n\n"+f4+"\n     --FASE 4--\n\n\nSe quiseres sair, digite: sair."){
+         alert("fase 4");
+       }mov = "sair"; 
+
+       //Fase 5
+       if( fases == "Escolha a fase que você deseja jogar:\n\n"+f5+"\n     --FASE 5--\n\n\nSe quiseres sair, digite: sair."){
+         alert("fase 5");
+       }mov = "sair";
+       }
+   }//Aqui fecha o caso a pessoa queira jogar  
+}
+

@@ -1,0 +1,375 @@
+//Nomes
+var DATABANKnome = [ ["ANA"],["BRUNO"],["CARLOS"],["DEBORA"],["ELIANA"],["FELIPE"],["GABRIE"],["HERIC"],["ISMAEL"],["JOSE"],["KIMBERLIM"],["LAURA"],["MATEUS"],["NATHAM"],["OSVALDO"],["PAULO"],["QUINTANA"],["ROSELI"],["SANDRA"],["TIAGO"],["ULISSES"],["VICTOR"],["WAL DISNEY"],["XUXA"],["YASMIN"],["ZEUS"] ];
+
+//CEP
+var DATABANKcep = [ ["AMAZÔNIA"],["BRASIL"],["CAXIAS"],["DINAMARCA"],["EGITO"],["FILIPINAS"],["GRA-BRETANHA"],["HIROSHIMA"],["ISRAEL"],["JERUSALEM"],["KUWAIT"],["LAURASIA"],["MARROCOS"],["NIGERIA"],["OSASCO"],["PELOTAS"],["QUINTA"],["RONDONIA"],["SIRIA"],["TURQUIA"],["UZBEQUISTAO"],["VIENA"],["WASHINGTON"],["XANGAI"],["YEMEM"],["ZURIQUE"] ];
+
+//Fruta
+var DATABANKfruta = [ ["AMEIXA"],["BANANA"],["CAJU"],["DAMASCO"],["EMBAUBA"],["FIGO"],["GOIABA"],["HAWTHORN"],["IBACURUPARI"],["JACA"],["KIWI"],["LARANJA"],["MELANCIA"],["NECTARINA"],["OITI"],["PESSEGO"],["QUIUI"],["ROMA"],["SERINGUELA"],["TANGERINA"],["UVA"],["VELUDO"],["WAMPI"],["XIXA"],["YAMOMO"],["ZIMBRO"] ];
+
+//Cor
+var DATABANKcor = [ ["AMARELO"],["BRANCO"],["CINZA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],["NAO EXISTE"],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],["NAO EXISTE"],["NAO EXISTE"],["NAO EXISTE"],["NAO EXISTE"] ];
+
+//Animal
+var DATABANKanimal = [ ["ARARA"],["BOI"],["CACHORRO"],["DROMEDARIO"],["ELEFANTE"],["FOCA"],["GIRAFA"],["HIPOPOTAMO"],["IGUANA"],["JACARE"],["KAKAPO"],["LONTRA"],["MACACO"],["NAJA"],["ORNITORRINCO"],["PATO"],["QUERO-QUERO"],["RATO"],["SAPO"],["TARTARUGA"],["URUBU"],["VEADO"],["WOMBAT"],["XIMANGO"],["YORKSHIRE"],["ZEBRA"] ];
+
+//Obj
+var DATABANKobj = [ ["ARMA"],["BANCO"],["CINZAS"],["DARDO"],["ESMERALDA"],["FUSCA"],["GELO"],["HELICOPTERO"],["IMA"],["JAULA"],["KUKRI"],["LANTERNA"],["MOUSE"],["NEVE"],["OURO"],["PINCEL"],["QUADRICICLO"],["ROSA"],["SALEIRO"],["TRAILER"],["UBER"],["VIDRO"],["WINDOWS"],["XADREZ"],["YAKULT"],["ZIPER"] ];
+
+//Carro
+var DATABANKcarro = [ ["AGERA"],["BUGATTI"],["COROLLA"],["DODGE CHARGER"],["ECLIPSE"],["FERRARI"],["GURGEL"],["HONDA"],["IMPALA"],["JAGUAR"],["KOMBI"],["LAMBORGHINI"],["MCLAREN"],["NISSAN"],["OPALA"],["PEUGEOT"],["QUANTUM"],["RENAULT"],["SANTANA"],["TOYOTA"],["UNO"],["VOLVO"],["WINDSTAR"],["XAVANTE"],["YAMAHA"],["ZAGATTO"] ];
+
+//Esporte
+var DATABANKesporte = [ ["ARREMESSO"],["BOXE"],["CORRIDA"],["DAMA"],["ESGRIMA"],["FUTEBOL"],["GOLFE"],["HOQUEI"],["I CHUAN"],["JUDO"],["KARATE"],["LUTA"],["MOTOCICLISMO"],["NATACAO"],["ORIENTACAO"],["PARKOUR"],["QUEIMADA"],["RAPEL"],["SALTO"],["TIRO AO ALVO"],["ULTIMATE FRISBEE"],["VOLEIBOL"],["WINDSTAR"],["XADREZ"],["NAO EXISTE"],["ZARABATANA"] ];
+
+alert("BEM VINDO\n  AO\n STOP!");
+var sairjogo = "N";
+var mov = 1;
+var menu = "]]]]STOP![[[[\n"+"  - JOGAR -\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"    SAIR";
+for( ; sairmenu == "N" && sairjogo != "S" ; ){
+   for( ; mov!= "" ; ){
+      mov = prompt(menu);
+      //Para cima
+      if( mov == "w" || mov == "W" ){
+        switch (menu) {
+              case "]]]]STOP![[[[\n"+"  - JOGAR -\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"    SAIR":
+                  menu = "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"  - SAIR -";
+                  break;
+              case "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"  - SAIR -":
+                  menu = "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+" - CRÉDITOS -\n"+"    SAIR"
+                  break;
+              case "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+" - CRÉDITOS -\n"+"    SAIR":
+                  menu = "]]]]STOP![[[[\n"+"    JOGAR\n"+"- COMO JOGAR -\n"+"   CRÉDITOS\n"+"    SAIR\n";
+                  break;
+              case  "]]]]STOP![[[[\n"+"    JOGAR\n"+"- COMO JOGAR -\n"+"   CRÉDITOS\n"+"    SAIR\n":
+                  menu = "]]]]STOP![[[[\n"+"  - JOGAR -\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"    SAIR";
+                  break;
+        }
+      }
+      //Para baixo
+      if( mov == "s" || mov == "S" ){
+        switch (menu) {
+              case "]]]]STOP![[[[\n"+"  - JOGAR -\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"    SAIR":
+                  menu = "]]]]STOP![[[[\n"+"    JOGAR\n"+"- COMO JOGAR -\n"+"   CRÉDITOS\n"+"    SAIR\n"
+                  break;
+              case "]]]]STOP![[[[\n"+"    JOGAR\n"+"- COMO JOGAR -\n"+"   CRÉDITOS\n"+"    SAIR\n":
+                  menu = "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+" - CRÉDITOS -\n"+"    SAIR"
+                  break;
+              case "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+" - CRÉDITOS -\n"+"    SAIR":
+                  menu =  "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"  - SAIR -";
+                  break;
+              case "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"  - SAIR -":
+                  menu = "]]]]STOP![[[[\n"+"  - JOGAR -\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"    SAIR";
+                  break;
+        }
+      }
+      //O que o jogador não pode fazer
+      if( mov != "w" && mov != "W" && mov != "s" && mov != "S" && mov!=(isNaN(mov)) ){
+        var pergunta = prompt("Você está perdido?");
+        if ( (pergunta == "s" || pergunta == "S" || pergunta == "SIM" || pergunta == "sim" || pergunta == "") && ( pergunta != "n" && pergunta != "N" && pergunta != "NÃO" && pergunta != "não" && pergunta != "NAO" && pergunta != "nao" ) ){
+          alert("Aqui estão alguns comandos:\nPara se mover pelo menu > PARA CIMA - W\nPara se mover pelo menu > PARA BAIXO - S\nPara escolher alguma opção do menu > APERTE ENTER");
+        }
+        if( (pergunta == "n" || pergunta == "N" || pergunta == "NÃO" || pergunta == "não" || pergunta == "NAO" || pergunta == "nao") && (pergunta != "s" && pergunta != "S" && pergunta != "SIM" && pergunta != "sim") ){
+          alert("Ok, só queria te ajudar...");
+        }
+      }
+   }
+   //Caso a pessoa deseja sair do jogo
+   if( menu == "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+"   CRÉDITOS\n"+"  - SAIR -" ){
+     sairmenu = prompt("Tem certeza que deseja sair?\n S( Para sim ) ou N(Para não)");
+   }
+   //Caso a pessoa deseja ver os créditos
+   if( menu == "]]]]STOP![[[[\n"+"    JOGAR\n"+"  COMO JOGAR\n"+" - CRÉDITOS -\n"+"    SAIR" ){
+     var voltar = "N";
+     while( voltar != "s" && voltar!= "S" ){
+          alert("-Victor Amaral-");
+          voltar = prompt("Deseja voltar ao menu?\n(Responda s(Para sim) e N(Para não)");
+     }
+     mov = 1;
+   }
+
+   //CANCELADO
+   var sairjogo = "N";
+   var respnome;
+   var respcep;
+   var respfruta;
+   var respcor;
+   var respanimal;
+   var respobjeto;
+   var respcarro;
+   var jogo = "| { NOME } | [ CEP ] | = FRUTA = | + COR + | - ANIMAL - | ! OBJETO ! | $ CARRO $ |\n"+
+   
+   //Caso a pessoa queira jogar
+   if( menu == menujogar ){
+     //NOME
+     var vrespnome = "";
+     var vespnome = ["____________"];
+     //CEP
+     var vrespcep = "";
+     var vespcep = ["_________"];
+     //FRUTA
+     var vrespfruta = "";
+     var vespfruta = ["____________"];
+     //COR
+     var vrespcor = "";
+     var vespcor = ["___________"];
+     //ANIMAL
+     var vrespanimal = "";
+     var vespanimal = ["__________"];
+     //OBJETO
+     var vrespobj = "";
+     var vespobj = ["_________"];
+     //CARRO
+     var vrespcarro = "";
+     var vespcarro = ["_____________"];
+     //LINGP
+     var vresplingp = "";
+     var vesplingp = ["________"];
+     var vlayout = [ "||_{_NOME_}_||_[_CEP_]_||"+"\n"+"||"+vrespnome+vespnome+"||"+vrespcep+vespcep+"||"+"\n"+"\n"+"||=_FRUTA_=_||_+_COR_+_||"+"\n"+"||"+vrespfruta+vespfruta+"||"+vrespcor+vespcor+"||"+"\n"+"\n"+"||-_ANIMAL_-||!OBJETO!_||"+"\n"+"||"+vrespanimal+vespanimal+"||"+vrespobj+vespobj+"||"+"\n"+"\n"+"||_$_CARRO_$_||_/LINGP/||"+"\n"+"||"+vrespcarro+vespcarro+"||"+vresplingp+vesplingp+"||"];
+     alert(vlayout);         
+     
+     //CANCELADO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   }
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+   
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+var respnomejogador = "";
+
+var respcepjogador = "";
+
+var respfrutajogador = "";
+
+var respcorjogador = "";
+
+var respanimaljogador = "";
+
+var respobjetojogador = "";
+
+var respcarrojogador = "";
+
+var respesportejogador = "";
+
+var mapastop = "|__NOME__|\n  "+respnomejogador+"\n\n"+"|__CEP__|\n   "+respcepjogador+"\n\n"+"|__FRUTA__|\n  "+respfrutajogador+"\n\n"+"|__COR__|\n  "+respcorjogador+"\n\n"+"|__ANIMAL__|\n  "+respanimaljogador+"\n\n"+"|__OBJETO__|\n"+respobjetojogador+"\n\n"+"|__CARRO__|\n  "+respcarrojogador+"\n\n"+"|__ESPORTE__|\n  "+respesportejogador+"\n\n";
+
+sairjogo = "N";
+
+var ponts = 0;
+
+for( ; sairjogo == "N" ; ){
+   
+   var letra = [ "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+   var crandom = Math.floor(Math.random()*25);
+
+   var letrajogo = letra[crandom];
+
+   alert(letrajogo);
+
+   var prencher = 8;
+
+   var desistir = "N";
+
+   for( ; sairjogo == "N" || ; ){ 
+
+      alert(mapastop);
+      var onde = prompt("Qual categoria desejas preencher?\n\nA letra é "+letrajogo+"\n\nSe desejas sair, digite 'sair'.\n\n"+mapastop);
+      onde = onde.toLowerCase(); 
+
+      //Caso jogador queira sair
+      if( onde == "sair"){
+        sairjogo = 1;        
+      }
+
+      //Caso o jogador queira definir um nome
+      if( onde == "nome"){
+        respnomejogador = prompt("Por favor, digite o nome que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir um cep
+      if( onde == "cep"){
+        respcepjogador = prompt("Por favor, digite o nome de uma cidade, país ou estado que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir uma fruta
+      if( onde == "fruta"){
+        respfrutajogador = prompt("Por favor, digite o nome de uma fruta que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir uma cor
+      if( onde == "cor"){
+        respcorjogador = prompt("Por favor, digite o nome de uma cor que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir um animal
+      if( onde == "animal"){
+        respanimaljogador = prompt("Por favor, digite o nome de um animal que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir um objeto
+      if( onde == "objeto"){
+        respobjetojogador = prompt("Por favor, digite o nome de um objeto que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir um carro
+      if( onde == "carro"){
+        respcarrojogador = prompt("Por favor, digite o nome de um carro que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+
+      //Caso o jogador queira definir um esporte
+      if( onde == "esporte"){
+        respesportejogador = prompt("Por favor, digite o nome de um esporte que começe com a letra "+letrajogo+": ");
+        mapastop = mapastop;
+      }
+   }
+
+
+
+
+
+}
+
+
+
+﻿//Nomes
+var nomes = [ ["ANA"],["BRUNO"],["CARLOS"],["DEBORA"],["ELIANA"],["FELIPE"],["GABRIE"],["HERIC"],["ISMAEL"],["JOSE"],["KIMBERLIM"],["LAURA"],["MATEUS"],["NATHAM"],["OSVALDO"],["PAULO"],["QUINTANA"],["ROSELI"],["SANDRA"],["TIAGO"],["ULISSES"],["VICTOR"],["WAL DISNEY"],["XUXA"],["YASMIN"],["ZEUS"] ];
+
+//CEP
+var CEP = [ ["AMAZÔNIA"],["BRASIL"],["CAXIAS"],["DINAMARCA"],["EGITO"],["FILIPINAS"],["GRA-BRETANHA"],["HIROSHIMA"],["ISRAEL"],["JERUSALEM"],["KUWAIT"],["LAURASIA"],["MARROCOS"],["NIGERIA"],["OSASCO"],["PELOTAS"],["QUINTA"],["RONDONIA"],["SIRIA"],["TURQUIA"],["UZBEQUISTAO"],["VIENA"],["WASHINGTON"],["XANGAI"],["YEMEM"],["ZURIQUE"] ];
+
+//Fruta
+var fruta = [ ["AMEIXA"],["BANANA"],["CAJU"],["DAMASCO"],["EMBAUBA"],["FIGO"],["GOIABA"],["HAWTHORN"],["IBACURUPARI"],["JACA"],["KIWI"],["LARANJA"],["MELANCIA"],["NECTARINA"],["OITI"],["PESSEGO"],["QUIUI"],["ROMA"],["SERINGUELA"],["TANGERINA"],["UVA"],["VELUDO"],["WAMPI"],["XIXA"],["YAMOMO"],["ZIMBRO"] ];
+
+//Cor
+var cor = [ ["AMARELO"],["BRANCO"],["CINZA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],[""],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],[""],[""],[""],[""] ];
+
+//Animal
+var cor = [ ["AMARELO"],["BRANCO"],["CINZA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],[""],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],[""],[""],[""],[""] ];
+//TERMINAR
+
+//Obj
+var cor = [ ["AMARELO"],["BRANCO"],["CINZA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],[""],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],[""],[""],[""],[""] ];
+//TERMINAR
+
+//Carro
+var cor = [ ["AMARELO"],["BRANCO"],["CINZA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],[""],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],[""],[""],[""],[""] ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+var crandom = Math.floor(Math.random()*25);
+
+//Nomes
+var nome = [ ["ANA"],["BRUNO"],["CARLOS"],["DEBORA"],["ELIANA"],["FELIPE"],["GABRIE"],["HERIC"],["ISMAEL"],["JOSE"],["KIMBERLIM"],["LAURA"],["MATEUS"],["NATHAM"],["OSVALDO"],["PAULO"],["QUINTANA"],["ROSELI"],["SANDRA"],["TIAGO"],["ULISSES"],["VICTOR"],["WAL DISNEY"],["XUXA"],["YASMIN"],["ZEUS"] ];
+
+//CEP
+var cep = [ ["AMAZÔNIA"],["BRASIL"],["CAXIAS"],["DINAMARCA"],["EGITO"],["FILIPINAS"],["GRA-BRETANHA"],["HIROSHIMA"],["ISRAEL"],["JERUSALEM"],["KUWAIT"],["LAURASIA"],["MARROCOS"],["NIGERIA"],["OSASCO"],["PELOTAS"],["QUINTA"],["RONDONIA"],["SIRIA"],["TURQUIA"],["UZBEQUISTAO"],["VIENA"],["WASHINGTON"],["XANGAI"],["YEMEM"],["ZURIQUE"] ];
+
+//Fruta
+var fruta = [ ["AMEIXA"],["BANANA"],["CAJU"],["DAMASCO"],["EMBAUBA"],["FIGO"],["GOIABA"],["HAWTHORN"],["IBACURUPARI"],["JACA"],["KIWI"],["LARANJA"],["MELANCIA"],["NECTARINA"],["OITI"],["PESSEGO"],["QUIUI"],["ROMA"],["SERINGUELA"],["TANGERINA"],["UVA"],["VELUDO"],["WAMPI"],["XIXA"],["YAMOMO"],["ZIMBRO"] ];
+
+//Cor
+var cor = [ ["AMARELO"],["BRANCO"],["CINZA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],[""],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],[""],[""],[""],[""] ];
+
+//Animal
+var animal = [ ["ARARA"],["BOI"],["CACHORRO"],["DROMEDARIO"],["ELEFANTE"],["FOCA"],["GIRAFA"],["HIPOPOTAMO"],["IGUANA"],["JACARE"],["KAKAPO"],["LONTRA"],["MACACO"],["NAJA"],["ORNITORRINCO"],["PATO"],["QUERO-QUERO"],["RATO"],["SAPO"],["TARTARUGA"],["URUBU"],["VEADO"],["WOMBAT"],["XIMANGO"],["YORKSHIRE"],["ZEBRA"] ];
+
+//Obj
+var obj = [ ["ARMA"],["BANCO"],["CINZAS"],["DARDO"],["ESMERALDA"],["FUSCA"],["GELO"],["HELICOPTERO"],["IMA"],["JAULA"],["KUKRI"],["LANTERNA"],["MOUSE"],["NEVE"],["OURO"],["PINCEL"],["QUADRICICLO"],["ROSA"],["SALEIRO"],["TRAILER"],["UBER"],["VIDRO"],["WINDOWS"],["XADREZ"],["YAKULT"],["ZIPER"] ];
+
+//Carro
+var carro = [ ["AGERA"],["BUGATTI"],["COROLLA"],["DOURADO"],["ESMERALDA"],["FUCSIA"],["GELO"],["HERBAL"],["INDIGO"],["JADE"],[""],["LARANJA"],["MARROM"],["NEVE"],["OURO"],["PRETO"],["QUANTUM"],["ROSA"],["SALMAO"],["TURQUESA"],["URUCUM"],["VERDE"],[""],[""],[""],[""] ];
+
+var respnomepc = nome[crandom];
+var respceppc = cep[crandom];
+var respfrutapc = fruta[crandom];
+var respcorpc = cor[crandom];
+var respanimalpc = animal[crandom];
+var respobjpc = obj[crandom];
+var respcarropc = carro[crandom];
+
+alert(respnomepc+"\n"+respceppc+"\n"+respfrutapc+"\n"+respcorpc+"\n"+respanimalpc+"\n"+respobjpc+"\n"+respcarropc);
+
+
+
+
+
+
+
+
+

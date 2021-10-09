@@ -1,0 +1,30 @@
+//Converta horas minutos e segundo só para segundos
+
+var r,h,m,s
+h=parseFloat(prompt("Insira o número de horas: "));
+m=parseFloat(prompt("Insira o número de minutos: "));
+s=parseFloat(prompt("Insira o número de segundos: "));
+r=(h*3600)+(m*60)+(s);
+alert ("O número de segundos ao total é de: "+r+" segundos.");
+
+//Converta segundos em horas, minutos e segundos
+var h,m,s
+s=parseFloat(prompt("Insira o número de segundos: "));
+h=(s/3600).toFixed(0);
+m=(s/60);
+s=(((s/100).toFixed(2)-s)*100);
+ alert(h+" / "+m+" / "+s);
+
+//Admitindo que uma data é lida por uma variável do tipo inteira,crie um programa que leia uma data no formato dd mm aa e mostre essa data no formato aa mm dd
+var d,dd,mm,aa;
+d=parseInt(prompt("Insira a data: "));
+dd=(d/10000).toFixed(0);
+mm=(((d/10000)-9)*100).toFixed(0);
+aa=Math.ceil(((d/100)-((d/100).toFixed(0)))*100);
+alert ( aa+" / "+mm+" / "+dd);
+//Crie um programa para somar segundos a uma hora e soma minutos a uma hora /
+
+60s=1min
+60min=1hora                    00:00:00
+
+mn=((s/60).toFixed(0))

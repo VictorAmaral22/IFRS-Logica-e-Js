@@ -1,0 +1,54 @@
+//IF
+
+//https://repl.it/repls/IckyCulturedProblem
+
+//Estruturas condicionais
+
+// if(cond){}
+//Operadores de comparação são: >, <, >=, <=, ==, !=;
+
+   2==2
+=> true   "Douglas"<"Raquel"
+=> true   "4"<4
+=> false   "4"==4
+=> true   "4"===4
+=> false
+
+//var n=parseInt(prompt("Digite um número: "));
+if (n==10){
+  alert("O número é 10!!!")
+}
+alert("FIM DO PROGRAMA");
+
+//É assim que se facilita a vida :]
+
+var n=parseInt(prompt("Digite um número: "));
+if (n==10){
+  alert("O número é 10!!!");
+  alert("FIM DO PROGRAMA");
+}
+else{
+  alert("O número não é 10!!!");
+}
+
+//ou
+var n=parseInt(prompt("Digite um número: "));
+if (n==10){
+  alert("O número é 10!!!");
+  alert("FIM DO PROGRAMA");
+}
+else
+  alert("O número não é 10!!!");
+
+//Quando se tem apenas uma linha de código, não é necessário usar chaves
+
+//Criar um programa que leia um número e diga se é par ou ímpar
+
+var n=parseInt(prompt("Digite um número: "));
+if (n%2==0){
+  alert("O número é par!!!");
+  
+}
+else{
+  alert("O número é ímpar");
+}

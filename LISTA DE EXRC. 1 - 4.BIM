@@ -1,0 +1,176 @@
+1. Elaborar um programa que leia o nome completo de um aluno. O programa deve validar o
+preenchimento de um nome completo e exibir a senha inicial do aluno, a qual será o sobrenome
+seguido pelo número de vogais do nome completo dele. O programa deve conter as funções:
+- validarNome() - que receba um nome como parâmetro e retorne true (nome completo) ou
+false (nome incompleto
+- obterSobrenome() - que receba um nome como parâmetro e retorne o último nome do
+aluno em letras minúsculas
+- contarVogais() - que receba um nome e retorne o número de vogais deste, com dois
+dígitos.
+
+//
+
+var nomecomp = prompt("Manda o seu nome pls: ");
+nomecomp.trim;
+nomecomp = nomecomp.toLowerCase();
+var validad = nomecomp.split(" "); 
+var c = validad.length-1;
+function ValidarNome( validad ){
+     if( validad.length >= 2 ){
+       var truoufals = true 
+       return truoufals
+     }
+     if( validad.length < 2 ){
+       var truoufals = false 
+       return truoufals
+     } 
+}
+var ferif = ValidarNome( validad );
+var c2 = 0;
+var c3 = 0;
+var cvogais = 0;
+if( ferif == true ){
+  for( ; c2 <= c ; c2++ ){
+     for( c3 = 0 ; c3 <= validad[c2].length ; c3 ++ ){
+        if( validad[c2].charAt(c3) == "a" ||  validad[c2].charAt(c3) == "e" || validad[c2].charAt(c3) == "i" || validad[c2].charAt(c3) == "o" || validad[c2].charAt(c3) == "u" ){
+          cvogais++;
+        }
+     }
+  }
+  cvogais = cvogais+"";
+  if(cvogais.length < 1 ){
+    cvogais = "0"+cvogais;
+  }
+  alert("Nome: "+validad.join(" ")+"\nSenha: "+validad[c]+cvogais );
+}
+
+//
+
+2. Elaborar um programa para uma veterinária, o qual leia o preço de uma vacina e se o cliente
+possui ou não convênio. Caso possua algum convênio exibir as opções "1-Amigo dos Animais" e
+"2-Saúde Animal". O programa deve exibir o valor do desconto (10% sem convênio; 20% para
+"Amigo dos Animais"; 50% "para Saúde Animal") e o valor a ser pago. Criar a função:
+- calcularDesconto() - que recebe como parâmetro valor e taxa de desconto. Retornar o
+valor do desconto.
+
+//
+
+var valor = prompt("Digite o valor da vacina: ");
+var perg = prompt("Tens convênio?");
+var desconto = 1;
+if( perg == "sim" ){
+  perg = prompt("Digíte o número do seu convênio:\n1-Amigo dos Animais\n2-Saúde Animal");
+  if(perg == 1 ){
+    desconto = 20;
+  }
+  if(perg == 2 ){
+    desconto = 50;
+  }
+}
+if(perg == "não" ){
+  desconto = 10
+}
+function Calculardesconto( valor, desconto ){
+     var Final = valor-((valor*desconto)/100);
+     return Final;
+}
+var f = Calculardesconto(valor, desconto);
+alert("O valor a ser pago é de : "+f);
+
+//
+
+3. Elaborar um programa que leia o nome e a idade de um atleta de um clube de natação. O
+programa deve exibir o nome com "-" abaixo das letras do nome e a categoria do atleta, que pode
+ser "Infantil" (até 12 anos), "Juvenil" (entre 13 e 18 anos) ou "Adulto" (acima de 18 anos). O
+programa deve conter as funções:
+- retornarTracos() - que receba um nome como parâmetro e retorne uma linha com "-" para
+as letras do nome (nos espaços, manter os espaços).
+- categorizarAluno() - que receba um número como parâmetro e retorne a categoria do
+aluno.
+
+//
+
+var n = prompt("Digite o seu nome: ");
+var v = n.split(" ");
+var c = v.length-1;
+var c2 = 0;
+var c3 = 0;
+var tracos = [];
+function retornarTracos(){
+     for( c2 = 0 ; c2 <= c ; c2++ ){
+        for( c3 = 0 ; c3 <= v[c2].length ; c3++ ){
+           tracos[c2] = "-".repeat(v[c2].length);
+        }
+     }     
+     tracos = tracos.join(" ")
+     return tracos;
+
+}
+function categorizarAluno(){
+     var idade = prompt("Diga a sua idade: ");
+     if( idade < 12 ){
+       var categoria = "Infantil";
+     }
+     if( 13 < idade < 18 ){
+       var categoria = "Juvenil";
+     }
+     if( idade > 18 ){
+       var categoria = "Adulto";
+     }
+     return categoria;
+}
+
+var t = retornarTracos();
+var cat = categorizarAluno();
+console.log(n+"\n"+t+"\n"+"Categoria: "+cat);
+
+//
+
+Para um determinado jogo, precisamos criar funções para as seguintes funcionalidades:
+
+4. Precisamos saber se um personagem morreu ou não depois de sofrer um ataque. Faça uma
+função que receba 2 parâmetros, DANO e SAUDE. A função deve retornar verdadeiro se o dano
+for matar o personagem (ou seja, deixar sua saúde menor ou igual a zero) e falso caso contrário.
+
+//
+
+function gatodeSchrodinger( DANO, SAUDE ){
+     if( SAUDE-DANO <=0 ){
+       return true;
+     }
+     if( SAUDE-DANO >0 ){
+       return false;
+     }
+}
+var dano = prompt("Dano");
+var saude = prompt("Saude"); 
+alert(gatodeSchrodinger( dano, saude ));
+
+//
+
+5. Temos um vetor de 5 posições, com o nome de 5 itens que nosso herói carrega na mochila.
+Quando o personagem chega numa porta, queremos detectar automaticamente se ele tem o não
+uma chave para deixá-lo passar. Crie uma função temChave que percorre o vetor comparando se
+cada item tem o nome “chave” e retorne verdadeiro se encontrar alguma. Caso contrário, a função
+deve retornar falso.
+
+//
+
+var itens = [];
+var c = 0;
+var pergunta = "n";
+while( c < 5 ){
+     itens[c] = prompt("Digite um iten que levas na mochila: ");
+     c++;
+}
+function chave(){
+     
+}
+
+
+
+
+
+
+
+

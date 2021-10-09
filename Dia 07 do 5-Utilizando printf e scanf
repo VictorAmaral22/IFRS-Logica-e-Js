@@ -1,0 +1,27 @@
+var a,b,c,ra,rb,rc,r;
+scanf("%d%d%d", "a","b","c");
+ra=Math.floor(a/2);
+rb=Math.floor(b/3);
+rc=Math.floor(c/5);
+if(a>=2 && b>=3 && c>=5){
+r=Math.min(ra,rb,rc);
+printf("%d\n",r);
+}
+else printf("%d\n",ra);
+
+var a,b,c,l,lado;
+scanf("%d%d%d%d%d","a","b","c","l","lado")
+if(lado=="a"){
+if(a<l && c<h)
+printf("%s\n","A caixa passa pela janela");
+}
+else{
+printf("%s\n","A caixa não passa pela janela");
+}
+if(lado=="b"){
+if(b<l && c<h)
+printf("%s\n","A caixa passa pela janela");
+}
+else{
+printf("%s\n","A caixa não passa pela janela");
+}

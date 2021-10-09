@@ -1,0 +1,37 @@
+HTML
+
+<html>
+     <head>
+          <title>TÍTULO</title>
+     </head>
+     <body>
+          <h1>O NEGÓCIO É PROGRAMAR EM JS</h1>
+          <p> JS É MUITO BRABO, SÓ CAFÉ</p>
+          <p> This is another paragraph.</p>
+     </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Buttons</h2>
+<p>HTML buttons are defined with the button tag:</p>
+
+<button>APERTA SSAPOHA</button>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<script src="main.js"></script>
+<h2>HTML Buttons</h2>
+<p>HTML buttons are defined with the button tag:</p>
+
+<button>APERTA SSAPOHA</button>
+
+</body>
+</html>
+

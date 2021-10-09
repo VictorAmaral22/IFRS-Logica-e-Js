@@ -1,0 +1,100 @@
+
+
+//Crie um game de JO-KEN-PO, a cada rodada o jogador vê o menu, escolha sua jogada:
+//1 papel
+//2 pedra
+//3 tesoura 
+//O jogo lê a opção do jogador e verifica se é válida, se for inválida a rodada acaba o jogador perde e o jogo acaba, se for válida, o computador escolhe uma resposta aleatória e é mostrada ao jogador. se o jogador ganhar ele pode jogar mais uma rodada e sua pontuação aumenta, o jogo acaba quando o jogador perde uma rodada, a pontuação é, mostrada ao final do jogo.
+
+var sair = "n";
+for(; sair != "s", sair == "n" ;){
+
+   alert("BEM VINDO!");
+
+   alert("Este é o JO-KEN-PO, é basicamente pedra, papel ou tesoura.\nTu escolherás entres as opções 'PEDRA', 'PAPEL' ou 'TESOURA', se digitares errado, o jogo acaba. 	Se o digitares for 'válido', o PC irá fazer sua jogada.");
+
+   alert("A moral é a seguinte, Pedras derrotam Tesouras e são derrotada por Papéis. Tesouras derrotam Papéis, e são derrotadas por pedras. Papéis derrotam Pedras, enquanto são derrotados por Tesouras.");
+
+   alert("Escolha sábiamente sua escolha...BOA SORTE!");
+
+   var ganhastes = 0;
+   for( ganhastes = 0; ganhastes >= 0 ; ){
+      var c = Math.ceil(Math.random()*3);
+      var escolhapc = c;
+      var escolha = parseInt(prompt("Escolha um deles apenas...\nOu seja digite o numero ao lado da sua escolha.\n\n ( PEDRA ) -1-\n [ PAPEL ] -2-\n { TESOURA } -3-"));
+      if( escolha != 1 && escolha != 2 && escolha != 3 ){
+        alert("] GAME OVER [\nESCOLHA INVÁLIDA...\n     Pontuação "+(ganhastes)+".");
+        sair = "s";  
+      }
+      //TESOURA
+      if( escolha == 1 ){
+
+        if( escolhapc == 1 ){
+          alert("]TU[ ✂️ X ✂️ ]PC[");
+          alert("EMPATE!");
+          alert("Pontuação = "+ganhastes);
+        }  
+
+        if( escolhapc == 2 ){
+          alert("]TU[ ✂️ X 🧻 ]PC[");
+          alert("GANHASTES!");
+          ganhastes++;
+        } 
+
+        if( escolhapc == 3 ){
+          alert("]TU[ ✂️ X 💎 ]PC[");
+          alert("PERDESTES!");
+          alert("] GAME OVER [\nESCOLHA INVÁLIDA...\n     Pontuação "+(ganhastes)+".");
+          sair = "s"; 
+        } 
+
+      }
+
+      //PAPEL
+      if( escolha == 2 ){
+
+        if( escolhapc == 1 ){
+          alert("]TU[ 🧻 X ✂️ ]PC[");
+          alert("PERDESTES!");
+          alert("] GAME OVER [\nESCOLHA INVÁLIDA...\n     Pontuação "+(ganhastes)+".");
+          sair = "s"; 
+        }  
+
+        if( escolhapc == 2 ){
+          alert("]TU[ 🧻 X 🧻 ]PC[");
+          alert("EMPATE!");
+          alert("Pontuação = "+ganhastes);
+        } 
+
+        if( escolhapc == 3 ){
+          alert("]TU[ 🧻 X 💎 ]PC[");
+          alert("GANHASTES!");
+          ganhastes++;
+        } 
+      }
+
+      //PEDRA
+      if( escolha == 3 ){
+
+        if( escolhapc == 1 ){
+          alert("]TU[ 💎 X ✂️ ]PC[");
+          alert("GANHASTES!");
+          ganhastes++;
+        }  
+
+        if( escolhapc == 2 ){
+          alert("]TU[ 💎 X 🧻 ]PC[");
+          alert("PERDESTES!");
+          alert("] GAME OVER [\nESCOLHA INVÁLIDA...\n     Pontuação "+(ganhastes)+".");
+          sair = "s";
+        } 
+
+        if( escolhapc == 3 ){
+          alert("]TU[ 💎 X 💎 ]PC[");
+          alert("EMPATE!");
+          alert("Pontuação = "+ganhastes);
+        } 
+      }
+   }
+}
+

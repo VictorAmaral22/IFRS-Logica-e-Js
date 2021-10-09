@@ -1,0 +1,72 @@
+1. O codigo de Cesar é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de substituicao na qual cada letra do texto é substituída por outra, que se apresenta
+no alfabeto abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. Implemente um
+programa que faça uso desse Código de Cesar (3 posicoes),  entre com uma string (sem acentos e ç) e retorne a string codificada.
+
+//
+
+var p = prompt("Escreva uma frase: ");
+    p = p.toUpperCase();
+var l = (p.length)-1;
+var c = 0;
+var pn = "";
+var code = 0;
+while( c <= l ){
+     if( (p.charAt(c)) != " " && (p.charAt(c)) != "," &&  (p.charAt(c)) != "." && (p.charAt(c)) != "!" && (p.charAt(c)) != "?" &&  isNaN(p.charAt(c)) && (p.charAt(c)) != "Z" ){
+       code = ((p.charCodeAt(c))+3)
+       pn = pn + (String.fromCharCode(code));
+     }
+     if( (p.charAt(c)) == " " ){
+       pn = pn + " ";
+     }
+     if( (p.charAt(c)) == "Z"){
+       pn = pn + "C";
+     }
+     c++
+}
+alert(pn);
+
+//
+
+2. Escrever um programa que leia uma letra e um texto e determine a quantidade de palavras do texto que contém a letra dada. (Considere que o texto é composto apenas por letras minúsculas e espaços em branco e que não existem espaços em branco consecutivos.)
+
+Extra(0,5): Mostrar a porcentagem de palaras no texto que contém a letra dada.
+
+"p" "papagaio" = 100.0
+"o" "no meio do caminho tinha uma pedra tinha uma pedra no meio do caminho" = 57.1
+
+//
+
+var p = prompt("Escreva uma frase: ");
+p = p.trim();    
+var l = prompt("Escreva uma letra: ");
+var qtd = 0;
+var c = 0;
+var t = p.length();
+while( c <= t ){
+     if( (p.charAt(c)) == l ){ 
+       qtd = qtd + 1;
+     }
+     while( p.charAt(c) != " " ){
+          c++;
+     } 
+     if( (p.charAt(c)) == " " ){ 
+       c++;
+     }
+}
+alert(qtd);
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
